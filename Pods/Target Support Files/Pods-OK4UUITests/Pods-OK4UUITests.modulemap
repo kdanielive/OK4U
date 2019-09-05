@@ -1,0 +1,6 @@
+framework module Pods_OK4UUITests {
+  umbrella header "Pods-OK4UUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}

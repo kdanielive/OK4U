@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2463CF558EDA8B186C20C423 /* Pods_OK4UTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 106D9C761F1B1AAB0242D350 /* Pods_OK4UTests.framework */; };
+		4E3DBB690883FF8C3DE72DEB /* Pods_OK4U.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AA227FCCCB2233FA1807BE40 /* Pods_OK4U.framework */; };
+		8AEDCDEFCE39070704A1A8A4 /* Pods_OK4UUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 08DBBDA36281FF159958BE34 /* Pods_OK4UUITests.framework */; };
 		ABB60409231FF3910029AA3B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABB60408231FF3910029AA3B /* AppDelegate.swift */; };
 		ABB6040B231FF3910029AA3B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABB6040A231FF3910029AA3B /* ViewController.swift */; };
 		ABB6040E231FF3910029AA3B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ABB6040C231FF3910029AA3B /* Main.storyboard */; };
@@ -15,6 +18,8 @@
 		ABB60416231FF3930029AA3B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ABB60414231FF3930029AA3B /* LaunchScreen.storyboard */; };
 		ABB60421231FF3930029AA3B /* OK4UTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABB60420231FF3930029AA3B /* OK4UTests.swift */; };
 		ABB6042C231FF3930029AA3B /* OK4UUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABB6042B231FF3930029AA3B /* OK4UUITests.swift */; };
+		ABB6043A232191210029AA3B /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = ABB60439232191210029AA3B /* GoogleService-Info.plist */; };
+		ABB6043D232193CB0029AA3B /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABB6043C232193CB0029AA3B /* LoginViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,6 +40,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		08DBBDA36281FF159958BE34 /* Pods_OK4UUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OK4UUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		0DEC38755B5DCC587CD113ED /* Pods-OK4U.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OK4U.debug.xcconfig"; path = "Target Support Files/Pods-OK4U/Pods-OK4U.debug.xcconfig"; sourceTree = "<group>"; };
+		106D9C761F1B1AAB0242D350 /* Pods_OK4UTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OK4UTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		40F1CFCF0501289EA77CEE16 /* Pods-OK4UTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OK4UTests.debug.xcconfig"; path = "Target Support Files/Pods-OK4UTests/Pods-OK4UTests.debug.xcconfig"; sourceTree = "<group>"; };
+		513A9D4FE6DAE7EF0B608284 /* Pods-OK4UUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OK4UUITests.release.xcconfig"; path = "Target Support Files/Pods-OK4UUITests/Pods-OK4UUITests.release.xcconfig"; sourceTree = "<group>"; };
+		57E3A135AABBF07E6F1BD930 /* Pods-OK4UTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OK4UTests.release.xcconfig"; path = "Target Support Files/Pods-OK4UTests/Pods-OK4UTests.release.xcconfig"; sourceTree = "<group>"; };
+		AA227FCCCB2233FA1807BE40 /* Pods_OK4U.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OK4U.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		ABB60405231FF3910029AA3B /* OK4U.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OK4U.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ABB60408231FF3910029AA3B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		ABB6040A231FF3910029AA3B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -49,6 +61,10 @@
 		ABB60427231FF3930029AA3B /* OK4UUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OK4UUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		ABB6042B231FF3930029AA3B /* OK4UUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OK4UUITests.swift; sourceTree = "<group>"; };
 		ABB6042D231FF3930029AA3B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		ABB60439232191210029AA3B /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		ABB6043C232193CB0029AA3B /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		AEB05D00A4429CDF85FC96D8 /* Pods-OK4UUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OK4UUITests.debug.xcconfig"; path = "Target Support Files/Pods-OK4UUITests/Pods-OK4UUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		EB8319C074D6E3F4E9A5494D /* Pods-OK4U.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OK4U.release.xcconfig"; path = "Target Support Files/Pods-OK4U/Pods-OK4U.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +72,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4E3DBB690883FF8C3DE72DEB /* Pods_OK4U.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -63,6 +80,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2463CF558EDA8B186C20C423 /* Pods_OK4UTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -70,12 +88,36 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8AEDCDEFCE39070704A1A8A4 /* Pods_OK4UUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		64E0062A9446F01591CB27DB /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				AA227FCCCB2233FA1807BE40 /* Pods_OK4U.framework */,
+				106D9C761F1B1AAB0242D350 /* Pods_OK4UTests.framework */,
+				08DBBDA36281FF159958BE34 /* Pods_OK4UUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		6FB43482D1F136C0944E6608 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				0DEC38755B5DCC587CD113ED /* Pods-OK4U.debug.xcconfig */,
+				EB8319C074D6E3F4E9A5494D /* Pods-OK4U.release.xcconfig */,
+				40F1CFCF0501289EA77CEE16 /* Pods-OK4UTests.debug.xcconfig */,
+				57E3A135AABBF07E6F1BD930 /* Pods-OK4UTests.release.xcconfig */,
+				AEB05D00A4429CDF85FC96D8 /* Pods-OK4UUITests.debug.xcconfig */,
+				513A9D4FE6DAE7EF0B608284 /* Pods-OK4UUITests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		ABB603FC231FF3910029AA3B = {
 			isa = PBXGroup;
 			children = (
@@ -83,6 +125,8 @@
 				ABB6041F231FF3930029AA3B /* OK4UTests */,
 				ABB6042A231FF3930029AA3B /* OK4UUITests */,
 				ABB60406231FF3910029AA3B /* Products */,
+				6FB43482D1F136C0944E6608 /* Pods */,
+				64E0062A9446F01591CB27DB /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -99,12 +143,14 @@
 		ABB60407231FF3910029AA3B /* OK4U */ = {
 			isa = PBXGroup;
 			children = (
+				ABB6043B232193C00029AA3B /* LoginPage */,
 				ABB60408231FF3910029AA3B /* AppDelegate.swift */,
 				ABB6040A231FF3910029AA3B /* ViewController.swift */,
 				ABB6040C231FF3910029AA3B /* Main.storyboard */,
 				ABB60412231FF3930029AA3B /* Assets.xcassets */,
 				ABB60414231FF3930029AA3B /* LaunchScreen.storyboard */,
 				ABB60417231FF3930029AA3B /* Info.plist */,
+				ABB60439232191210029AA3B /* GoogleService-Info.plist */,
 				ABB6040F231FF3910029AA3B /* OK4U.xcdatamodeld */,
 			);
 			path = OK4U;
@@ -128,6 +174,14 @@
 			path = OK4UUITests;
 			sourceTree = "<group>";
 		};
+		ABB6043B232193C00029AA3B /* LoginPage */ = {
+			isa = PBXGroup;
+			children = (
+				ABB6043C232193CB0029AA3B /* LoginViewController.swift */,
+			);
+			path = LoginPage;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -135,9 +189,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = ABB60430231FF3930029AA3B /* Build configuration list for PBXNativeTarget "OK4U" */;
 			buildPhases = (
+				9CEE63EA07A3799B2607F6E4 /* [CP] Check Pods Manifest.lock */,
 				ABB60401231FF3910029AA3B /* Sources */,
 				ABB60402231FF3910029AA3B /* Frameworks */,
 				ABB60403231FF3910029AA3B /* Resources */,
+				C716CCCBCB8CFA785ECBEF39 /* [CP] Embed Pods Frameworks */,
+				4CF017B57683EA09758BE27F /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -152,6 +209,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = ABB60433231FF3930029AA3B /* Build configuration list for PBXNativeTarget "OK4UTests" */;
 			buildPhases = (
+				B34F77E96D0C249D9DC38F6D /* [CP] Check Pods Manifest.lock */,
 				ABB60418231FF3930029AA3B /* Sources */,
 				ABB60419231FF3930029AA3B /* Frameworks */,
 				ABB6041A231FF3930029AA3B /* Resources */,
@@ -170,6 +228,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = ABB60436231FF3930029AA3B /* Build configuration list for PBXNativeTarget "OK4UUITests" */;
 			buildPhases = (
+				7685780165771A8939A7F122 /* [CP] Check Pods Manifest.lock */,
 				ABB60423231FF3930029AA3B /* Sources */,
 				ABB60424231FF3930029AA3B /* Frameworks */,
 				ABB60425231FF3930029AA3B /* Resources */,
@@ -235,6 +294,7 @@
 				ABB60416231FF3930029AA3B /* LaunchScreen.storyboard in Resources */,
 				ABB60413231FF3930029AA3B /* Assets.xcassets in Resources */,
 				ABB6040E231FF3910029AA3B /* Main.storyboard in Resources */,
+				ABB6043A232191210029AA3B /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -254,11 +314,131 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		4CF017B57683EA09758BE27F /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-OK4U/Pods-OK4U-resources.sh",
+				"${PODS_ROOT}/GoogleSignIn/Resources/GoogleSignIn.bundle",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/GoogleSignIn.bundle",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-OK4U/Pods-OK4U-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7685780165771A8939A7F122 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-OK4UUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9CEE63EA07A3799B2607F6E4 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-OK4U-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B34F77E96D0C249D9DC38F6D /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-OK4UTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C716CCCBCB8CFA785ECBEF39 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-OK4U/Pods-OK4U-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/GTMOAuth2/GTMOAuth2.framework",
+				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMOAuth2.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-OK4U/Pods-OK4U-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		ABB60401231FF3910029AA3B /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ABB6043D232193CB0029AA3B /* LoginViewController.swift in Sources */,
 				ABB60411231FF3910029AA3B /* OK4U.xcdatamodeld in Sources */,
 				ABB6040B231FF3910029AA3B /* ViewController.swift in Sources */,
 				ABB60409231FF3910029AA3B /* AppDelegate.swift in Sources */,
@@ -434,6 +614,7 @@
 		};
 		ABB60431231FF3930029AA3B /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0DEC38755B5DCC587CD113ED /* Pods-OK4U.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -452,6 +633,7 @@
 		};
 		ABB60432231FF3930029AA3B /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = EB8319C074D6E3F4E9A5494D /* Pods-OK4U.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -470,6 +652,7 @@
 		};
 		ABB60434231FF3930029AA3B /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 40F1CFCF0501289EA77CEE16 /* Pods-OK4UTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -491,6 +674,7 @@
 		};
 		ABB60435231FF3930029AA3B /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 57E3A135AABBF07E6F1BD930 /* Pods-OK4UTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -512,6 +696,7 @@
 		};
 		ABB60437231FF3930029AA3B /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = AEB05D00A4429CDF85FC96D8 /* Pods-OK4UUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -532,6 +717,7 @@
 		};
 		ABB60438231FF3930029AA3B /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 513A9D4FE6DAE7EF0B608284 /* Pods-OK4UUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
