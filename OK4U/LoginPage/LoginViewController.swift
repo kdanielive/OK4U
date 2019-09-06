@@ -31,7 +31,7 @@ class LoginViewController: UIViewController, GIDSignInUIDelegate {
     
     @objc func didSignIn() {
         let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
-        let nextViewController = storyBoard.instantiateViewController(withIdentifier: "ViewController")
+        let nextViewController = storyBoard.instantiateViewController(withIdentifier: "EntryView") as! UINavigationController
         self.present(nextViewController, animated:false, completion:nil)
         
     }
