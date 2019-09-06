@@ -20,6 +20,8 @@
 		ABB6042C231FF3930029AA3B /* OK4UUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABB6042B231FF3930029AA3B /* OK4UUITests.swift */; };
 		ABB6043A232191210029AA3B /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = ABB60439232191210029AA3B /* GoogleService-Info.plist */; };
 		ABB6043D232193CB0029AA3B /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABB6043C232193CB0029AA3B /* LoginViewController.swift */; };
+		ABB6043E2322BB540029AA3B /* OK4U.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = ABB6040F231FF3910029AA3B /* OK4U.xcdatamodeld */; };
+		ABB6043F2322BB550029AA3B /* OK4U.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = ABB6040F231FF3910029AA3B /* OK4U.xcdatamodeld */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -449,6 +451,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ABB6043E2322BB540029AA3B /* OK4U.xcdatamodeld in Sources */,
 				ABB60421231FF3930029AA3B /* OK4UTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -457,6 +460,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ABB6043F2322BB550029AA3B /* OK4U.xcdatamodeld in Sources */,
 				ABB6042C231FF3930029AA3B /* OK4UUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
