@@ -10,6 +10,7 @@
 		2463CF558EDA8B186C20C423 /* Pods_OK4UTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 106D9C761F1B1AAB0242D350 /* Pods_OK4UTests.framework */; };
 		4E3DBB690883FF8C3DE72DEB /* Pods_OK4U.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AA227FCCCB2233FA1807BE40 /* Pods_OK4U.framework */; };
 		8AEDCDEFCE39070704A1A8A4 /* Pods_OK4UUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 08DBBDA36281FF159958BE34 /* Pods_OK4UUITests.framework */; };
+		AB03BE45234416E40018BE14 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB03BE44234416E40018BE14 /* SettingsViewController.swift */; };
 		ABB60409231FF3910029AA3B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABB60408231FF3910029AA3B /* AppDelegate.swift */; };
 		ABB6040B231FF3910029AA3B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABB6040A231FF3910029AA3B /* ViewController.swift */; };
 		ABB6040E231FF3910029AA3B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ABB6040C231FF3910029AA3B /* Main.storyboard */; };
@@ -49,6 +50,7 @@
 		513A9D4FE6DAE7EF0B608284 /* Pods-OK4UUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OK4UUITests.release.xcconfig"; path = "Target Support Files/Pods-OK4UUITests/Pods-OK4UUITests.release.xcconfig"; sourceTree = "<group>"; };
 		57E3A135AABBF07E6F1BD930 /* Pods-OK4UTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OK4UTests.release.xcconfig"; path = "Target Support Files/Pods-OK4UTests/Pods-OK4UTests.release.xcconfig"; sourceTree = "<group>"; };
 		AA227FCCCB2233FA1807BE40 /* Pods_OK4U.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OK4U.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		AB03BE44234416E40018BE14 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		ABB60405231FF3910029AA3B /* OK4U.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OK4U.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ABB60408231FF3910029AA3B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		ABB6040A231FF3910029AA3B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -120,6 +122,14 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		AB03BE43234416D50018BE14 /* SettingsPage */ = {
+			isa = PBXGroup;
+			children = (
+				AB03BE44234416E40018BE14 /* SettingsViewController.swift */,
+			);
+			path = SettingsPage;
+			sourceTree = "<group>";
+		};
 		ABB603FC231FF3910029AA3B = {
 			isa = PBXGroup;
 			children = (
@@ -145,6 +155,7 @@
 		ABB60407231FF3910029AA3B /* OK4U */ = {
 			isa = PBXGroup;
 			children = (
+				AB03BE43234416D50018BE14 /* SettingsPage */,
 				ABB6043B232193C00029AA3B /* LoginPage */,
 				ABB60408231FF3910029AA3B /* AppDelegate.swift */,
 				ABB6040A231FF3910029AA3B /* ViewController.swift */,
@@ -443,6 +454,7 @@
 				ABB6043D232193CB0029AA3B /* LoginViewController.swift in Sources */,
 				ABB60411231FF3910029AA3B /* OK4U.xcdatamodeld in Sources */,
 				ABB6040B231FF3910029AA3B /* ViewController.swift in Sources */,
+				AB03BE45234416E40018BE14 /* SettingsViewController.swift in Sources */,
 				ABB60409231FF3910029AA3B /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

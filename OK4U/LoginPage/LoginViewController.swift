@@ -18,10 +18,6 @@ class LoginViewController: UIViewController, GIDSignInUIDelegate {
         GIDSignIn.sharedInstance()?.signIn()
     }
     
-    @IBAction func signOut(_ sender: Any) {
-        GIDSignIn.sharedInstance().signOut()
-    }
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.view.backgroundColor = UIColor(red: 12/255, green: 67/255, blue: 46/255, alpha: 1)
