@@ -60,7 +60,7 @@
             </objects>
             <point key="canvasLocation" x="2577" y="404"/>
         </scene>
-        <!--Settings-->
+        <!--설정-->
         <scene sceneID="mOm-y4-eK4">
             <objects>
                 <viewController id="026-ID-leU" customClass="SettingsViewController" customModule="OK4U" customModuleProvider="target" sceneMemberID="viewController">
@@ -80,7 +80,7 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="JdN-tt-5YG"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Settings" id="u9Y-ou-70p"/>
+                    <tabBarItem key="tabBarItem" title="설정" id="u9Y-ou-70p"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ehe-KR-7ew" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -163,13 +163,13 @@
         <!--오케이 소개-->
         <scene sceneID="f0o-xI-ucY">
             <objects>
-                <tableViewController id="LLN-rf-aP2" sceneMemberID="viewController">
+                <tableViewController id="LLN-rf-aP2" customClass="OKIntroTableViewController" customModule="OK4U" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="nnU-Ik-sRv">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="hYc-dH-RZk">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="OKIntroTableViewCell" id="hYc-dH-RZk" customClass="OKIntroTableViewCell" customModule="OK4U" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="hYc-dH-RZk" id="7ex-gK-DQq">
