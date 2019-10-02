@@ -15,6 +15,7 @@ class OKIntroTableViewCell: UITableViewCell {
     @IBOutlet var imageTextView: UITextView!
     @IBOutlet var aspectRatioConstraint: NSLayoutConstraint!
     @IBOutlet var textViewHeightConstraint: NSLayoutConstraint!
+    @IBOutlet var yearLabel: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()

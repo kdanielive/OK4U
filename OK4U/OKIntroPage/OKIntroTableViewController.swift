@@ -63,7 +63,6 @@ class OKIntroTableViewController: UITableViewController {
             홍성우
             다민
         """
-        cell.imageTextView.layer.borderWidth = 1.0
         cell.imageTextView.sizeToFit()
         let newConstraint2 = cell.textViewHeightConstraint.constraintWithConstant(cell.imageTextView.frame.height)
         cell.imageTextView.removeConstraint(cell.textViewHeightConstraint)
@@ -71,6 +70,7 @@ class OKIntroTableViewController: UITableViewController {
         cell.imageTextView.layoutIfNeeded()
         cell.textViewHeightConstraint = newConstraint2
 
+        cell.yearLabel.text = "OK4Wellbeing @ '18-'19 2학기"
         return cell
     }
     
