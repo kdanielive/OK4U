@@ -13,36 +13,13 @@ class OKIntroTableViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        let ref = Database.database().reference()
-        
-        ref.child("members").observe(.value, with: { (snapshot) in
-            print("clubs: \(snapshot)")
-            if(snapshot.exists()) {
-                let array:NSArray = snapshot.children.allObjects as NSArray
-
-                for obj in array {
-                    let snapshot:DataSnapshot = obj as! DataSnapshot
-                    if let childSnapshot = snapshot.value as? [String : AnyObject]
-                        {
-                        if let clubName = childSnapshot["name"] as? String {
-                            print(clubName)
-                        }
-                    }
-                }
-            }
-        })
-        
-        ref.child("members").child("member1").observe(.value, with: {(snapshot) in
-            let dict = snapshot.value as! [String:AnyObject]
-            print("Printing: ", dict["name"] as! String)
-        })
 
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
+        
     }
 
     // MARK: - Table view data source
@@ -54,19 +31,37 @@ class OKIntroTableViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        
-        return 1
+        return memberCount
     }
 
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "OKIntroTableViewCell", for: indexPath) as! OKIntroTableViewCell
-
-        // Configure the cell...
-
+        let row = indexPath.row
+        
+        // Setting the image
+        let memberImageView = UIImageView(image: UIImage(named: memberNames[row]+"image"))
+        let padding = CGFloat(10)
+        let imageWidth = cell.layer.frame.width - CGFloat(padding*2)
+        memberImageView.frame = CGRect(x: padding, y: padding, width: imageWidth, height: imageWidth)
+        cell.addSubview(memberImageView)
+        
+        // Setting the UILabel
+        let memberNameLabel = UILabel()
+        let labelHeight = CGFloat(20)
+        let labelWidth = cell.layer.frame.width - padding*2
+        let labelX = padding
+        let labelY = imageWidth + padding*2
+        memberNameLabel.frame = CGRect(x: labelX, y: labelY, width: labelWidth, height: labelHeight)
+        memberNameLabel.text = memberNames[row]
+        cell.addSubview(memberNameLabel)
+        
         return cell
     }
-
+    
+    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return self.view.frame.width + 100
+    }
 
     /*
     // Override to support conditional editing of the table view.

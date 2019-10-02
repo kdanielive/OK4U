@@ -13,6 +13,7 @@
 		AB03BE45234416E40018BE14 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB03BE44234416E40018BE14 /* SettingsViewController.swift */; };
 		AB03BE48234418F60018BE14 /* OKIntroTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB03BE47234418F60018BE14 /* OKIntroTableViewController.swift */; };
 		AB03BE4A234419130018BE14 /* OKIntroTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB03BE49234419130018BE14 /* OKIntroTableViewCell.swift */; };
+		AB03BE4D23448D4E0018BE14 /* VideoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB03BE4C23448D4E0018BE14 /* VideoView.swift */; };
 		ABB60409231FF3910029AA3B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABB60408231FF3910029AA3B /* AppDelegate.swift */; };
 		ABB6040B231FF3910029AA3B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABB6040A231FF3910029AA3B /* ViewController.swift */; };
 		ABB6040E231FF3910029AA3B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ABB6040C231FF3910029AA3B /* Main.storyboard */; };
@@ -55,6 +56,7 @@
 		AB03BE44234416E40018BE14 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		AB03BE47234418F60018BE14 /* OKIntroTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OKIntroTableViewController.swift; sourceTree = "<group>"; };
 		AB03BE49234419130018BE14 /* OKIntroTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OKIntroTableViewCell.swift; sourceTree = "<group>"; };
+		AB03BE4C23448D4E0018BE14 /* VideoView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VideoView.swift; sourceTree = "<group>"; };
 		ABB60405231FF3910029AA3B /* OK4U.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OK4U.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ABB60408231FF3910029AA3B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		ABB6040A231FF3910029AA3B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -143,6 +145,14 @@
 			path = OKIntroPage;
 			sourceTree = "<group>";
 		};
+		AB03BE4B23448D0A0018BE14 /* NewsfeedPage */ = {
+			isa = PBXGroup;
+			children = (
+				AB03BE4C23448D4E0018BE14 /* VideoView.swift */,
+			);
+			path = NewsfeedPage;
+			sourceTree = "<group>";
+		};
 		ABB603FC231FF3910029AA3B = {
 			isa = PBXGroup;
 			children = (
@@ -168,6 +178,7 @@
 		ABB60407231FF3910029AA3B /* OK4U */ = {
 			isa = PBXGroup;
 			children = (
+				AB03BE4B23448D0A0018BE14 /* NewsfeedPage */,
 				AB03BE46234418C00018BE14 /* OKIntroPage */,
 				AB03BE43234416D50018BE14 /* SettingsPage */,
 				ABB6043B232193C00029AA3B /* LoginPage */,
@@ -471,6 +482,7 @@
 				ABB60411231FF3910029AA3B /* OK4U.xcdatamodeld in Sources */,
 				AB03BE48234418F60018BE14 /* OKIntroTableViewController.swift in Sources */,
 				AB03BE4A234419130018BE14 /* OKIntroTableViewCell.swift in Sources */,
+				AB03BE4D23448D4E0018BE14 /* VideoView.swift in Sources */,
 				ABB6040B231FF3910029AA3B /* ViewController.swift in Sources */,
 				AB03BE45234416E40018BE14 /* SettingsViewController.swift in Sources */,
 				ABB60409231FF3910029AA3B /* AppDelegate.swift in Sources */,

@@ -123,7 +123,6 @@
                         <segue destination="GOu-Bh-nyf" kind="relationship" relationship="viewControllers" id="KM2-CH-SXH"/>
                         <segue destination="dDU-fO-qPt" kind="relationship" relationship="viewControllers" id="Zjw-01-D1n"/>
                         <segue destination="5bG-6a-Cak" kind="relationship" relationship="viewControllers" id="0vZ-ea-tmd"/>
-                        <segue destination="LLN-rf-aP2" kind="relationship" relationship="viewControllers" id="cKf-um-GxU"/>
                         <segue destination="026-ID-leU" kind="relationship" relationship="viewControllers" id="4f7-Xg-kb9"/>
                     </connections>
                 </tabBarController>

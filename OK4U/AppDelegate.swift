@@ -11,6 +11,9 @@ import CoreData
 import Firebase
 import GoogleSignIn
 
+var memberCount = 0
+var memberNames = [String]()
+
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
     
@@ -58,6 +61,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
         GIDSignIn.sharedInstance().clientID = FirebaseApp.app()?.options.clientID
         GIDSignIn.sharedInstance().delegate = self
 
+        // Dealing with the database
+        let ref = Database.database().reference()
+        ref.child("members").observe(.value, with: {(snapshot) in
+            let dict = snapshot.value as! [String:[String:AnyObject]]
+            memberCount = dict.values.count
+            for item in dict.values {
+                memberNames.append((item["name"] as! String))
+            }
+        })
         return true
     }
 
