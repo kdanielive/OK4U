@@ -20,6 +20,8 @@ class OKIntroTableViewController: UITableViewController {
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
         
+        tableView.rowHeight = UITableView.automaticDimension
+        tableView.estimatedRowHeight = 300
     }
 
     // MARK: - Table view data source
@@ -39,30 +41,30 @@ class OKIntroTableViewController: UITableViewController {
         let cell = tableView.dequeueReusableCell(withIdentifier: "OKIntroTableViewCell", for: indexPath) as! OKIntroTableViewCell
         let row = indexPath.row
         
-        // Setting the image
-        let memberImageView = UIImageView(image: UIImage(named: memberNames[row]+"image"))
-        let padding = CGFloat(10)
-        let imageWidth = cell.layer.frame.width - CGFloat(padding*2)
-        memberImageView.frame = CGRect(x: padding, y: padding, width: imageWidth, height: imageWidth)
-        cell.addSubview(memberImageView)
+        cell.photo.image = UIImage(named: "ok20191")
+        let image = UIImage(named: "ok20191")!
         
-        // Setting the UILabel
-        let memberNameLabel = UILabel()
-        let labelHeight = CGFloat(20)
-        let labelWidth = cell.layer.frame.width - padding*2
-        let labelX = padding
-        let labelY = imageWidth + padding*2
-        memberNameLabel.frame = CGRect(x: labelX, y: labelY, width: labelWidth, height: labelHeight)
-        memberNameLabel.text = memberNames[row]
-        cell.addSubview(memberNameLabel)
+        // Changing the imageview constraint programmatically to fit the image
+        let ratio = image.size.width / image.size.height
+        cell.photo.layer.borderWidth = 1.0
+        let newConstraint = cell.aspectRatioConstraint.constraintWithMultiplier(ratio)
+        cell.removeConstraint(cell.aspectRatioConstraint)
+        cell.addConstraint(newConstraint)
+        cell.layoutIfNeeded()
+        cell.aspectRatioConstraint = newConstraint
+
         
+        cell.imageLabel.text = memberNames[row]
+
         return cell
     }
     
+    /*
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return self.view.frame.width + 100
     }
-
+    */
+    
     /*
     // Override to support conditional editing of the table view.
     override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
