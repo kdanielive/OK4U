@@ -13,8 +13,30 @@ class OKIntroTableViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
         
+        let ref = Database.database().reference()
+        
+        ref.child("members").observe(.value, with: { (snapshot) in
+            print("clubs: \(snapshot)")
+            if(snapshot.exists()) {
+                let array:NSArray = snapshot.children.allObjects as NSArray
+
+                for obj in array {
+                    let snapshot:DataSnapshot = obj as! DataSnapshot
+                    if let childSnapshot = snapshot.value as? [String : AnyObject]
+                        {
+                        if let clubName = childSnapshot["name"] as? String {
+                            print(clubName)
+                        }
+                    }
+                }
+            }
+        })
+        
+        ref.child("members").child("member1").observe(.value, with: {(snapshot) in
+            let dict = snapshot.value as! [String:AnyObject]
+            print("Printing: ", dict["name"] as! String)
+        })
 
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
