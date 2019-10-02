@@ -9,6 +9,7 @@ target 'OK4U' do
   pod 'Firebase/Analytics'
   pod 'Firebase/Auth'
   pod 'GoogleSignIn'
+  pod 'Firebase/Database'
 
   target 'OK4UTests' do
     inherit! :search_paths
