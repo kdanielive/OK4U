@@ -21,7 +21,7 @@ class OKIntroTableViewController: UITableViewController {
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
         
         tableView.rowHeight = UITableView.automaticDimension
-        tableView.estimatedRowHeight = 300
+        tableView.estimatedRowHeight = 150
     }
 
     // MARK: - Table view data source
@@ -46,15 +46,30 @@ class OKIntroTableViewController: UITableViewController {
         
         // Changing the imageview constraint programmatically to fit the image
         let ratio = image.size.width / image.size.height
-        cell.photo.layer.borderWidth = 1.0
         let newConstraint = cell.aspectRatioConstraint.constraintWithMultiplier(ratio)
-        cell.removeConstraint(cell.aspectRatioConstraint)
-        cell.addConstraint(newConstraint)
-        cell.layoutIfNeeded()
+        cell.photo.removeConstraint(cell.aspectRatioConstraint)
+        cell.photo.addConstraint(newConstraint)
+        cell.photo.layoutIfNeeded()
         cell.aspectRatioConstraint = newConstraint
 
-        
-        cell.imageLabel.text = memberNames[row]
+        cell.imageTextView.text = """
+            김리지
+            장현화
+            최윤영
+            김석준
+            김지은
+            원성준
+            전상욱
+            홍성우
+            다민
+        """
+        cell.imageTextView.layer.borderWidth = 1.0
+        cell.imageTextView.sizeToFit()
+        let newConstraint2 = cell.textViewHeightConstraint.constraintWithConstant(cell.imageTextView.frame.height)
+        cell.imageTextView.removeConstraint(cell.textViewHeightConstraint)
+        cell.imageTextView.addConstraint(newConstraint2)
+        cell.imageTextView.layoutIfNeeded()
+        cell.textViewHeightConstraint = newConstraint2
 
         return cell
     }

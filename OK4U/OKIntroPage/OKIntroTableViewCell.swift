@@ -12,8 +12,9 @@ import Firebase
 class OKIntroTableViewCell: UITableViewCell {
 
     @IBOutlet var photo: UIImageView!
-    @IBOutlet var imageLabel: UILabel!
+    @IBOutlet var imageTextView: UITextView!
     @IBOutlet var aspectRatioConstraint: NSLayoutConstraint!
+    @IBOutlet var textViewHeightConstraint: NSLayoutConstraint!
     
     override func awakeFromNib() {
         super.awakeFromNib()
