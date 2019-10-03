@@ -89,14 +89,19 @@ class OKIntroTableViewController: UITableViewController {
             print(infoButton.frame)
             infoButton.backgroundColor = UIColor(red: 12/255, green: 67/255, blue: 46/255, alpha: 1)
             infoButton.layer.cornerRadius = 20
-            infoButton.addTarget(self, action: #selector(segueToNext), for: .touchUpInside)
-            
+            infoButton.addTarget(self, action: #selector(segueToNext(sender:)), for: .touchUpInside)
+            infoButton.addTarget(self, action: #selector(infoButtonTouchDown(sender:)), for: .touchDown)
             return cell
         }
     }
     
-    @objc func segueToNext() {
+    @objc func segueToNext(sender: UIButton) {
         self.performSegue(withIdentifier: "segueToNavBarToOKHistory", sender: self)
+        sender.backgroundColor = UIColor(red: 12/255, green: 67/255, blue: 46/255, alpha: 1)
+    }
+    
+    @objc func infoButtonTouchDown(sender: UIButton) {
+        sender.backgroundColor = UIColor(red: 12/255, green: 0/255, blue: 46/255, alpha: 1)
     }
     
     @IBAction func unwindToOKIntroTableView(segue:UIStoryboardSegue) { }

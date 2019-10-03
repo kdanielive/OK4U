@@ -15,6 +15,7 @@
 		AB03BE4A234419130018BE14 /* OKIntroTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB03BE49234419130018BE14 /* OKIntroTableViewCell.swift */; };
 		AB03BE4D23448D4E0018BE14 /* Newscard.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB03BE4C23448D4E0018BE14 /* Newscard.swift */; };
 		AB03BE4F23467A740018BE14 /* OKIntroDetailTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB03BE4E23467A740018BE14 /* OKIntroDetailTableViewCell.swift */; };
+		AB03BE52234689280018BE14 /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB03BE51234689280018BE14 /* Event.swift */; };
 		ABB60409231FF3910029AA3B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABB60408231FF3910029AA3B /* AppDelegate.swift */; };
 		ABB6040B231FF3910029AA3B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABB6040A231FF3910029AA3B /* ViewController.swift */; };
 		ABB6040E231FF3910029AA3B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ABB6040C231FF3910029AA3B /* Main.storyboard */; };
@@ -59,6 +60,7 @@
 		AB03BE49234419130018BE14 /* OKIntroTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OKIntroTableViewCell.swift; sourceTree = "<group>"; };
 		AB03BE4C23448D4E0018BE14 /* Newscard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Newscard.swift; sourceTree = "<group>"; };
 		AB03BE4E23467A740018BE14 /* OKIntroDetailTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OKIntroDetailTableViewCell.swift; sourceTree = "<group>"; };
+		AB03BE51234689280018BE14 /* Event.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
 		ABB60405231FF3910029AA3B /* OK4U.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OK4U.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ABB60408231FF3910029AA3B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		ABB6040A231FF3910029AA3B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -151,9 +153,17 @@
 		AB03BE4B23448D0A0018BE14 /* NewsfeedPage */ = {
 			isa = PBXGroup;
 			children = (
-				AB03BE4C23448D4E0018BE14 /* Newscard.swift */,
 			);
 			path = NewsfeedPage;
+			sourceTree = "<group>";
+		};
+		AB03BE50234689180018BE14 /* Swift Files */ = {
+			isa = PBXGroup;
+			children = (
+				AB03BE4C23448D4E0018BE14 /* Newscard.swift */,
+				AB03BE51234689280018BE14 /* Event.swift */,
+			);
+			path = "Swift Files";
 			sourceTree = "<group>";
 		};
 		ABB603FC231FF3910029AA3B = {
@@ -181,6 +191,7 @@
 		ABB60407231FF3910029AA3B /* OK4U */ = {
 			isa = PBXGroup;
 			children = (
+				AB03BE50234689180018BE14 /* Swift Files */,
 				AB03BE4B23448D0A0018BE14 /* NewsfeedPage */,
 				AB03BE46234418C00018BE14 /* OKIntroPage */,
 				AB03BE43234416D50018BE14 /* SettingsPage */,
@@ -485,6 +496,7 @@
 				ABB60411231FF3910029AA3B /* OK4U.xcdatamodeld in Sources */,
 				AB03BE48234418F60018BE14 /* OKIntroTableViewController.swift in Sources */,
 				AB03BE4A234419130018BE14 /* OKIntroTableViewCell.swift in Sources */,
+				AB03BE52234689280018BE14 /* Event.swift in Sources */,
 				AB03BE4F23467A740018BE14 /* OKIntroDetailTableViewCell.swift in Sources */,
 				AB03BE4D23448D4E0018BE14 /* Newscard.swift in Sources */,
 				ABB6040B231FF3910029AA3B /* ViewController.swift in Sources */,
