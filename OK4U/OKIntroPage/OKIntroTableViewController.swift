@@ -11,6 +11,8 @@ import Firebase
 
 class OKIntroTableViewController: UITableViewController {
 
+    let okDetailCategories = ["오케이 역사", "역대 오케이 멤버", "오케이 이벤드 소개", "스폰서 소개"]
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -20,8 +22,10 @@ class OKIntroTableViewController: UITableViewController {
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
         
-        tableView.rowHeight = UITableView.automaticDimension
-        tableView.estimatedRowHeight = 150
+        // MAYBE NEEDED? PROBABLY NOT
+        //tableView.rowHeight = UITableView.automaticDimension
+        //tableView.estimatedRowHeight = 150
+        tableView.separatorStyle = .none
     }
 
     // MARK: - Table view data source
@@ -33,46 +37,69 @@ class OKIntroTableViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return memberCount
+        return 5
     }
 
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "OKIntroTableViewCell", for: indexPath) as! OKIntroTableViewCell
         let row = indexPath.row
         
-        cell.photo.image = UIImage(named: "ok20191")
-        let image = UIImage(named: "ok20191")!
-        
-        // Changing the imageview constraint programmatically to fit the image
-        let ratio = image.size.width / image.size.height
-        let newConstraint = cell.aspectRatioConstraint.constraintWithMultiplier(ratio)
-        cell.photo.removeConstraint(cell.aspectRatioConstraint)
-        cell.photo.addConstraint(newConstraint)
-        cell.photo.layoutIfNeeded()
-        cell.aspectRatioConstraint = newConstraint
+        if(row==0) {
+            let cell = tableView.dequeueReusableCell(withIdentifier: "OKIntroTableViewCell", for: indexPath) as! OKIntroTableViewCell
+            
+            cell.photo.image = UIImage(named: "ok20191")
+            let image = UIImage(named: "ok20191")!
+            
+            // Changing the imageview constraint programmatically to fit the image
+            let ratio = image.size.width / image.size.height
+            let newConstraint = cell.aspectRatioConstraint.constraintWithMultiplier(ratio)
+            cell.photo.removeConstraint(cell.aspectRatioConstraint)
+            cell.photo.addConstraint(newConstraint)
+            cell.photo.layoutIfNeeded()
+            cell.aspectRatioConstraint = newConstraint
 
-        cell.imageTextView.text = """
-            김리지
-            장현화
-            최윤영
-            김석준
-            김지은
-            원성준
-            전상욱
-            홍성우
-            다민
-        """
-        cell.imageTextView.sizeToFit()
-        let newConstraint2 = cell.textViewHeightConstraint.constraintWithConstant(cell.imageTextView.frame.height)
-        cell.imageTextView.removeConstraint(cell.textViewHeightConstraint)
-        cell.imageTextView.addConstraint(newConstraint2)
-        cell.imageTextView.layoutIfNeeded()
-        cell.textViewHeightConstraint = newConstraint2
+            cell.imageTextView.text = """
+                김리지 장현화 최윤영 김석준 김지은 원성준 전상욱 홍성우 다민
+            """
+            cell.imageTextView.sizeToFit()
+            let newConstraint2 = cell.textViewHeightConstraint.constraintWithConstant(cell.imageTextView.frame.height)
+            cell.imageTextView.removeConstraint(cell.textViewHeightConstraint)
+            cell.imageTextView.addConstraint(newConstraint2)
+            cell.imageTextView.layoutIfNeeded()
+            cell.textViewHeightConstraint = newConstraint2
 
-        cell.yearLabel.text = "OK4Wellbeing @ '18-'19 2학기"
-        return cell
+            cell.yearLabel.text = "OK4Wellbeing @ '18-'19 2학기"
+                        
+            return cell
+        } else {
+            let cell = tableView.dequeueReusableCell(withIdentifier: "DetailCell", for: indexPath) as! OKIntroDetailTableViewCell
+            
+            let idx = row-1
+            let titleString = NSAttributedString(string:okDetailCategories[idx],
+            attributes:[NSAttributedString.Key.foregroundColor: UIColor.white,
+                        NSAttributedString.Key.font: UIFont(name: "Times New Roman", size: 18.0) as Any])
+            
+            let infoButton = UIButton()
+            let padding = CGFloat(10)
+            let buttonWidth = cell.contentView.frame.width - padding*2
+            let buttonHeight = cell.contentView.frame.height - padding
+            infoButton.frame = CGRect(x: padding, y: padding/2, width: buttonWidth, height: buttonHeight)
+            infoButton.setAttributedTitle(titleString, for: .normal)
+            cell.addSubview(infoButton)
+            print(infoButton.frame)
+            infoButton.backgroundColor = UIColor(red: 12/255, green: 67/255, blue: 46/255, alpha: 1)
+            infoButton.layer.cornerRadius = 20
+            infoButton.addTarget(self, action: #selector(segueToNext), for: .touchUpInside)
+            
+            return cell
+        }
     }
+    
+    @objc func segueToNext() {
+        self.performSegue(withIdentifier: "segueToNavBarToOKHistory", sender: self)
+    }
+    
+    @IBAction func unwindToOKIntroTableView(segue:UIStoryboardSegue) { }
     
     /*
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {

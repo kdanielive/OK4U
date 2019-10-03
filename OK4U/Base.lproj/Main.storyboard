@@ -178,13 +178,13 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Rzw-9e-7fa">
-                                            <rect key="frame" x="20" y="30" width="374" height="106"/>
+                                            <rect key="frame" x="20" y="50" width="374" height="66"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" secondItem="Rzw-9e-7fa" secondAttribute="height" multiplier="374:100" id="cUi-Yt-8XE"/>
                                             </constraints>
                                         </imageView>
                                         <textView clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" scrollEnabled="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="VMh-uJ-nKD">
-                                            <rect key="frame" x="20" y="146" width="374" height="20"/>
+                                            <rect key="frame" x="20" y="126" width="374" height="20"/>
                                             <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="20" id="nuS-p7-HQF"/>
@@ -194,7 +194,7 @@
                                             <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                         </textView>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yqN-fA-dbh">
-                                            <rect key="frame" x="20" y="0.0" width="374" height="20"/>
+                                            <rect key="frame" x="20" y="20" width="374" height="20"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="20" id="0Pd-vd-ONz"/>
                                             </constraints>
@@ -204,12 +204,12 @@
                                         </label>
                                     </subviews>
                                     <constraints>
-                                        <constraint firstAttribute="bottom" secondItem="VMh-uJ-nKD" secondAttribute="bottom" id="1aa-hK-HHW"/>
+                                        <constraint firstAttribute="bottom" secondItem="VMh-uJ-nKD" secondAttribute="bottom" constant="20" id="1aa-hK-HHW"/>
                                         <constraint firstItem="Rzw-9e-7fa" firstAttribute="top" secondItem="yqN-fA-dbh" secondAttribute="bottom" constant="10" id="FtS-sZ-O3f"/>
                                         <constraint firstAttribute="trailing" secondItem="Rzw-9e-7fa" secondAttribute="trailing" constant="20" id="JJJ-ua-hwf"/>
                                         <constraint firstAttribute="trailing" secondItem="VMh-uJ-nKD" secondAttribute="trailing" constant="20" id="Kvq-Yo-0Ep"/>
                                         <constraint firstItem="VMh-uJ-nKD" firstAttribute="leading" secondItem="7ex-gK-DQq" secondAttribute="leading" constant="20" id="Ncs-dW-rEW"/>
-                                        <constraint firstItem="yqN-fA-dbh" firstAttribute="top" secondItem="7ex-gK-DQq" secondAttribute="top" id="W8o-6U-u8G"/>
+                                        <constraint firstItem="yqN-fA-dbh" firstAttribute="top" secondItem="7ex-gK-DQq" secondAttribute="top" constant="20" id="W8o-6U-u8G"/>
                                         <constraint firstItem="yqN-fA-dbh" firstAttribute="leading" secondItem="7ex-gK-DQq" secondAttribute="leading" constant="20" id="Wz9-BY-MmB"/>
                                         <constraint firstItem="Rzw-9e-7fa" firstAttribute="leading" secondItem="7ex-gK-DQq" secondAttribute="leading" constant="20" id="vuX-ej-wP3"/>
                                         <constraint firstItem="VMh-uJ-nKD" firstAttribute="top" secondItem="Rzw-9e-7fa" secondAttribute="bottom" constant="10" id="wuC-tP-Q2V"/>
@@ -224,6 +224,14 @@
                                     <outlet property="yearLabel" destination="yqN-fA-dbh" id="Cp1-6p-Bed"/>
                                 </connections>
                             </tableViewCell>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="DetailCell" rowHeight="50" id="mky-jJ-x6Q" customClass="OKIntroDetailTableViewCell" customModule="OK4U" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="194" width="414" height="50"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="mky-jJ-x6Q" id="Dj8-cd-Bw2">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="50"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
                         </prototypes>
                         <connections>
                             <outlet property="dataSource" destination="LLN-rf-aP2" id="EwP-Yu-j7d"/>
@@ -231,10 +239,37 @@
                         </connections>
                     </tableView>
                     <tabBarItem key="tabBarItem" title="오케이 소개" id="CWK-1R-aIe"/>
+                    <connections>
+                        <segue destination="FxK-bc-3ZQ" kind="show" identifier="segueToNavBarToOKHistory" id="exL-kZ-KwV"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zAE-WG-tpc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2576.811594202899" y="1092.8571428571429"/>
+        </scene>
+        <!--OK4U with EstherFormula-->
+        <scene sceneID="iTG-SD-Vad">
+            <objects>
+                <viewController id="7zY-yd-L7R" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="drd-3n-PkN">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="JXg-fv-sWm"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="OK4U with EstherFormula" id="09K-hB-CBw">
+                        <barButtonItem key="backBarButtonItem" title="Back" id="TrS-yX-Bfg"/>
+                        <barButtonItem key="leftBarButtonItem" title="Back" image="arrow.turn.down.left" catalog="system" id="Ci6-jt-72i">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <connections>
+                                <segue destination="2g6-jf-Tqz" kind="unwind" unwindAction="unwindToOKIntroTableViewWithSegue:" id="4cf-ZD-nWa"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="SXy-Ka-3Ok" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4274" y="1093"/>
         </scene>
         <!--뉴스피드-->
         <scene sceneID="QBx-SI-KoR">
@@ -265,8 +300,33 @@
             </objects>
             <point key="canvasLocation" x="2577" y="-974"/>
         </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="EjE-KY-r1B">
+            <objects>
+                <navigationController storyboardIdentifier="NavControlToOKHistory" automaticallyAdjustsScrollViewInsets="NO" modalPresentationStyle="fullScreen" id="FxK-bc-3ZQ" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" id="0SQ-12-Ag3"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="6y6-kT-ogx">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="0.047058823530000002" green="0.26274509800000001" blue="0.18039215689999999" alpha="1" colorSpace="calibratedRGB"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="7zY-yd-L7R" kind="relationship" relationship="rootViewController" id="bcg-Os-3aR"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="LIb-nw-bf6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="2g6-jf-Tqz" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="3422" y="1093"/>
+        </scene>
     </scenes>
     <resources>
         <image name="OKLogo" width="1248" height="243"/>
+        <image name="arrow.turn.down.left" catalog="system" width="64" height="48"/>
     </resources>
 </document>
