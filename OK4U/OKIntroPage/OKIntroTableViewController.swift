@@ -81,12 +81,11 @@ class OKIntroTableViewController: UITableViewController {
             
             let infoButton = UIButton()
             let padding = CGFloat(10)
-            let buttonWidth = cell.contentView.frame.width - padding*2
+            let buttonWidth = self.view.frame.width - padding*2
             let buttonHeight = cell.contentView.frame.height - padding
             infoButton.frame = CGRect(x: padding, y: padding/2, width: buttonWidth, height: buttonHeight)
             infoButton.setAttributedTitle(titleString, for: .normal)
             cell.addSubview(infoButton)
-            print(infoButton.frame)
             infoButton.backgroundColor = UIColor(red: 12/255, green: 67/255, blue: 46/255, alpha: 1)
             infoButton.layer.cornerRadius = 10
             infoButton.addTarget(self, action: #selector(segueToNext(sender:)), for: .touchUpInside)
