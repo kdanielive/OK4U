@@ -11,7 +11,7 @@ import Firebase
 
 class OKIntroTableViewController: UITableViewController {
 
-    let okDetailCategories = ["오케이 역사", "역대 오케이 멤버", "오케이 이벤드 소개", "스폰서 소개"]
+    let okDetailCategories = ["오케이 역사", "역대 오케이 멤버", "오케이 이벤트 소개", "스폰서 소개"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -88,7 +88,7 @@ class OKIntroTableViewController: UITableViewController {
             cell.addSubview(infoButton)
             print(infoButton.frame)
             infoButton.backgroundColor = UIColor(red: 12/255, green: 67/255, blue: 46/255, alpha: 1)
-            infoButton.layer.cornerRadius = 20
+            infoButton.layer.cornerRadius = 10
             infoButton.addTarget(self, action: #selector(segueToNext(sender:)), for: .touchUpInside)
             infoButton.addTarget(self, action: #selector(infoButtonTouchDown(sender:)), for: .touchDown)
             return cell
