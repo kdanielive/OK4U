@@ -253,7 +253,7 @@
         <!--뉴스피드-->
         <scene sceneID="QBx-SI-KoR">
             <objects>
-                <tableViewController id="GOu-Bh-nyf" sceneMemberID="viewController">
+                <tableViewController id="GOu-Bh-nyf" customClass="NewsfeedTableViewController" customModule="OK4U" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="VFu-P5-Db2">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
