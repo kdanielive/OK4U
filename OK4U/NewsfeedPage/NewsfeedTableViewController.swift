@@ -44,19 +44,24 @@ class NewsfeedTableViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "newsfeed1", for: indexPath) as! NewsfeedTableViewCell
-
+        
         
         // Configure the cell...
 
         return cell
     }
     
-    override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        if(section==0){
-            return "Upcoming soon..."
-        } else {
-            return ""
-        }
+    override func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        let headerView = UIView(frame: CGRect(x: 0, y: 0, width: tableView.bounds.size.width, height: 30))
+        headerView.backgroundColor  = UIColor.clear
+        
+        let titleLabel = UILabel()
+        titleLabel.text = "Coming soon..."
+        titleLabel.font = UIFont.boldSystemFont(ofSize: 17)
+        titleLabel.frame = CGRect(x: 20, y: 0, width: tableView.bounds.size.width-20, height: 30)
+        headerView.addSubview(titleLabel)
+        
+        return headerView
     }
     
 
