@@ -57,7 +57,7 @@
             <objects>
                 <viewController storyboardIdentifier="ViewController" title="ViewController" id="5bG-6a-Cak" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="AXz-ca-Wwf">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="mQt-G6-nPv"/>
@@ -66,7 +66,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Pi9-gE-wzq" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3486.9565217391305" y="403.79464285714283"/>
+            <point key="canvasLocation" x="4332" y="-605"/>
         </scene>
         <!--설정-->
         <scene sceneID="mOm-y4-eK4">
@@ -107,7 +107,6 @@
                     </tabBar>
                     <connections>
                         <segue destination="3bI-3Q-8ot" kind="relationship" relationship="viewControllers" id="KM2-CH-SXH"/>
-                        <segue destination="tz0-fh-PHb" kind="relationship" relationship="viewControllers" id="0vZ-ea-tmd"/>
                         <segue destination="zQq-BD-rP0" kind="relationship" relationship="viewControllers" id="jqj-05-1f3"/>
                         <segue destination="026-ID-leU" kind="relationship" relationship="viewControllers" id="4f7-Xg-kb9"/>
                     </connections>
@@ -244,6 +243,9 @@
                                 </tableViewCellContentView>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <connections>
+                                    <segue destination="5bG-6a-Cak" kind="presentation" id="bhH-gt-BH0"/>
+                                </connections>
                             </tableViewCell>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="newsfeed2" id="MK4-q8-Vsp" customClass="NewsfeedTableViewCell" customModule="OK4U" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="71.5" width="414" height="43.5"/>
@@ -252,6 +254,9 @@
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="xVu-Hr-bRh" kind="presentation" id="AQH-cP-HTO"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -260,16 +265,27 @@
                         </connections>
                     </tableView>
                     <toolbarItems/>
-                    <navigationItem key="navigationItem" id="YUu-KS-vSP">
-                        <barButtonItem key="rightBarButtonItem" title="Item" image="memories" catalog="system" id="HPF-he-W8k">
-                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        </barButtonItem>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" id="YUu-KS-vSP"/>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="y1u-s8-1PK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3461" y="-295"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="6L9-c3-hUE">
+            <objects>
+                <viewController id="xVu-Hr-bRh" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="BlZ-jJ-hpp">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="WMV-WI-ExW"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="i4d-YY-b77" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4332" y="77"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="EjE-KY-r1B">
@@ -318,29 +334,6 @@
             </objects>
             <point key="canvasLocation" x="2577" y="-295"/>
         </scene>
-        <!--타임라인-->
-        <scene sceneID="LE2-8B-3pe">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="tz0-fh-PHb" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="타임라인" id="jSx-Ia-PcF"/>
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="nwN-gI-eb1">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                        <color key="barTintColor" red="0.047058823530000002" green="0.26274509800000001" blue="0.18039215689999999" alpha="1" colorSpace="calibratedRGB"/>
-                        <textAttributes key="titleTextAttributes">
-                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        </textAttributes>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="5bG-6a-Cak" kind="relationship" relationship="rootViewController" id="PBv-Si-yXm"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="ysu-yA-NjI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2576.811594202899" y="403.79464285714283"/>
-        </scene>
         <!--오케이 소개-->
         <scene sceneID="bIM-Jd-6yn">
             <objects>
@@ -368,6 +361,5 @@
     <resources>
         <image name="OKLogo" width="1248" height="243"/>
         <image name="arrow.turn.down.left" catalog="system" width="64" height="48"/>
-        <image name="memories" catalog="system" width="64" height="54"/>
     </resources>
 </document>
