@@ -226,7 +226,7 @@
             </objects>
             <point key="canvasLocation" x="5184.057971014493" y="1092.8571428571429"/>
         </scene>
-        <!--OK4U with EstherFormula-->
+        <!--Newsfeed Table View Controller-->
         <scene sceneID="QBx-SI-KoR">
             <objects>
                 <tableViewController id="GOu-Bh-nyf" customClass="NewsfeedTableViewController" customModule="OK4U" customModuleProvider="target" sceneMemberID="viewController">
@@ -242,6 +242,8 @@
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -249,10 +251,13 @@
                             <outlet property="delegate" destination="GOu-Bh-nyf" id="ckB-Da-Bpb"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="OK4U with EstherFormula" id="YUu-KS-vSP">
-                        <barButtonItem key="leftBarButtonItem" title="Item" id="ybQ-kV-eSh"/>
-                        <barButtonItem key="rightBarButtonItem" title="Item" image="memories" catalog="system" id="HPF-he-W8k"/>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" id="YUu-KS-vSP">
+                        <barButtonItem key="rightBarButtonItem" title="Item" image="memories" catalog="system" id="HPF-he-W8k">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </barButtonItem>
                     </navigationItem>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="y1u-s8-1PK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

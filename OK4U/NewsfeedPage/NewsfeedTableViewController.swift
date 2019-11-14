@@ -13,6 +13,7 @@ class NewsfeedTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
     
+        self.navigationController?.navigationBar.isHidden = true
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
@@ -36,7 +37,7 @@ class NewsfeedTableViewController: UITableViewController {
         if(section==0) {
             return 1
         } else {
-            return 0
+            return 2
         }
     }
 
