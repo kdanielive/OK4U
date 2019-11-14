@@ -37,7 +37,7 @@ class NewsfeedTableViewController: UITableViewController {
         if(section==0) {
             return 1
         } else {
-            return 0
+            return 10
         }
     }
 
@@ -51,7 +51,7 @@ class NewsfeedTableViewController: UITableViewController {
             let ratio = backgroundImage.size.height / backgroundImage.size.width
             let backgroundWidth = self.view.frame.width
             backgroundImageView.frame = CGRect(x: 0, y: 0, width: backgroundWidth, height: ratio*backgroundWidth)
-            backgroundImageView.alpha = 0.5
+            backgroundImageView.alpha = 0.4
             backgroundImageView.contentMode = .scaleAspectFit
             
             let soonView = UILabel()
@@ -74,7 +74,43 @@ class NewsfeedTableViewController: UITableViewController {
 
             return cell
         } else {
-            let cell = tableView.dequeueReusableCell(withIdentifier: "newsfeed1", for: indexPath) as! NewsfeedTableViewCell
+            let cell = tableView.dequeueReusableCell(withIdentifier: "newsfeed2", for: indexPath) as! NewsfeedTableViewCell
+            
+            let padding = CGFloat(5)
+            
+            // Background Image Part
+            let backgroundImage = UIImage(named: "ok20191")!
+            let backgroundImageView = UIImageView()
+            backgroundImageView.contentMode = .scaleAspectFill
+            backgroundImageView.image = backgroundImage
+            
+            backgroundImageView.frame = CGRect(x: padding, y: padding, width: cell.frame.width-padding*2, height: cell.frame.height-padding*2)
+            backgroundImageView.alpha = 0.7
+            backgroundImageView.clipsToBounds = true
+            
+            cell.addSubview(backgroundImageView)
+            
+            // Date Label Part
+            let dateLabel = UILabel()
+            dateLabel.text = "2019/11"
+            dateLabel.font = UIFont.boldSystemFont(ofSize: 15)
+            dateLabel.textColor = UIColor(red: 12/255, green: 67/255, blue: 46/255, alpha: 1.0)
+            dateLabel.backgroundColor = UIColor.white
+            dateLabel.frame = CGRect(x: padding, y: padding, width: 0, height: 0)
+            dateLabel.sizeToFit()
+            backgroundImageView.addSubview(dateLabel)
+            
+            // Title Label Part
+            let titleLabel = UILabel()
+            titleLabel.text = "옼식당"
+            titleLabel.font = UIFont.boldSystemFont(ofSize: 15)
+            titleLabel.textColor = UIColor(red: 12/255, green: 67/255, blue: 46/255, alpha: 1.0)
+            titleLabel.backgroundColor = UIColor.white
+            titleLabel.sizeToFit()
+            titleLabel.frame = CGRect(x: backgroundImageView.frame.width-padding-titleLabel.frame.width, y: backgroundImageView.frame.height-padding-titleLabel.frame.height, width: 0, height: 0)
+            titleLabel.sizeToFit()
+            backgroundImageView.addSubview(titleLabel)
+            
             return cell
         }
     }
@@ -85,8 +121,11 @@ class NewsfeedTableViewController: UITableViewController {
         let ratio = backgroundImage.size.height / backgroundImage.size.width
         let backgroundWidth = self.view.frame.width
         */
-
-        return self.view.frame.size.height / 3
+        if(indexPath.section==0) {
+            return self.view.frame.size.height / 3
+        } else  {
+            return self.view.frame.size.height / 5
+        }
     }
     
     /*
