@@ -12,11 +12,7 @@ class NewsfeedTableViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        let logo = UIImage(named: "barOKLogo.png")
-        let imageView = UIImageView(image:logo)
-        self.navigationItem.titleView = imageView
-
+    
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 

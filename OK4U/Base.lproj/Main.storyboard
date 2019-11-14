@@ -62,7 +62,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="mQt-G6-nPv"/>
                     </view>
-                    <navigationItem key="navigationItem" title="OK4U" id="dZA-5C-FIs"/>
+                    <navigationItem key="navigationItem" title="OK4U with EstherFormula" id="dZA-5C-FIs"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Pi9-gE-wzq" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -116,7 +116,7 @@
             </objects>
             <point key="canvasLocation" x="1734.7826086956522" y="154.6875"/>
         </scene>
-        <!--Intro Table View Controller-->
+        <!--OK4U with EstherFormula-->
         <scene sceneID="f0o-xI-ucY">
             <objects>
                 <tableViewController id="LLN-rf-aP2" customClass="OKIntroTableViewController" customModule="OK4U" customModuleProvider="target" sceneMemberID="viewController">
@@ -193,7 +193,7 @@
                             <outlet property="delegate" destination="LLN-rf-aP2" id="FB6-yE-5Nk"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="R36-04-LL4"/>
+                    <navigationItem key="navigationItem" title="OK4U with EstherFormula" id="R36-04-LL4"/>
                     <connections>
                         <segue destination="FxK-bc-3ZQ" kind="show" identifier="segueToNavBarToOKHistory" id="exL-kZ-KwV"/>
                     </connections>
@@ -226,7 +226,7 @@
             </objects>
             <point key="canvasLocation" x="5184.057971014493" y="1092.8571428571429"/>
         </scene>
-        <!--Newsfeed Table View Controller-->
+        <!--OK4U with EstherFormula-->
         <scene sceneID="QBx-SI-KoR">
             <objects>
                 <tableViewController id="GOu-Bh-nyf" customClass="NewsfeedTableViewController" customModule="OK4U" customModuleProvider="target" sceneMemberID="viewController">
@@ -249,7 +249,8 @@
                             <outlet property="delegate" destination="GOu-Bh-nyf" id="ckB-Da-Bpb"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="YUu-KS-vSP">
+                    <navigationItem key="navigationItem" title="OK4U with EstherFormula" id="YUu-KS-vSP">
+                        <barButtonItem key="leftBarButtonItem" title="Item" id="ybQ-kV-eSh"/>
                         <barButtonItem key="rightBarButtonItem" title="Item" image="memories" catalog="system" id="HPF-he-W8k"/>
                     </navigationItem>
                 </tableViewController>
@@ -291,6 +292,9 @@
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="barTintColor" red="0.047058823530000002" green="0.26274509800000001" blue="0.18039215689999999" alpha="1" colorSpace="calibratedRGB"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
@@ -311,6 +315,9 @@
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="barTintColor" red="0.047058823530000002" green="0.26274509800000001" blue="0.18039215689999999" alpha="1" colorSpace="calibratedRGB"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
@@ -331,6 +338,9 @@
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="barTintColor" red="0.047058823530000002" green="0.26274509800000001" blue="0.18039215689999999" alpha="1" colorSpace="calibratedRGB"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
