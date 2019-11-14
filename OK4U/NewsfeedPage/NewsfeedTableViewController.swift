@@ -85,7 +85,7 @@ class NewsfeedTableViewController: UITableViewController {
             backgroundImageView.image = backgroundImage
             
             backgroundImageView.frame = CGRect(x: padding, y: padding, width: cell.frame.width-padding*2, height: cell.frame.height-padding*2)
-            backgroundImageView.alpha = 0.7
+            backgroundImageView.alpha = 1.0
             backgroundImageView.clipsToBounds = true
             
             cell.addSubview(backgroundImageView)

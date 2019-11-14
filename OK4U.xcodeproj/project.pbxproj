@@ -20,6 +20,7 @@
 		AB078934237CC5D000E7B2C6 /* NewsfeedTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB078933237CC5D000E7B2C6 /* NewsfeedTableViewController.swift */; };
 		AB078936237CF1B600E7B2C6 /* Globals.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB078935237CF1B600E7B2C6 /* Globals.swift */; };
 		AB078939237D27BB00E7B2C6 /* EventDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB078938237D27BB00E7B2C6 /* EventDetailViewController.swift */; };
+		AB07893B237D289500E7B2C6 /* EventDetailCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB07893A237D289500E7B2C6 /* EventDetailCollectionViewCell.swift */; };
 		ABB60409231FF3910029AA3B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABB60408231FF3910029AA3B /* AppDelegate.swift */; };
 		ABB6040B231FF3910029AA3B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABB6040A231FF3910029AA3B /* ViewController.swift */; };
 		ABB6040E231FF3910029AA3B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ABB6040C231FF3910029AA3B /* Main.storyboard */; };
@@ -69,6 +70,7 @@
 		AB078933237CC5D000E7B2C6 /* NewsfeedTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsfeedTableViewController.swift; sourceTree = "<group>"; };
 		AB078935237CF1B600E7B2C6 /* Globals.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Globals.swift; sourceTree = "<group>"; };
 		AB078938237D27BB00E7B2C6 /* EventDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventDetailViewController.swift; sourceTree = "<group>"; };
+		AB07893A237D289500E7B2C6 /* EventDetailCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventDetailCollectionViewCell.swift; sourceTree = "<group>"; };
 		ABB60405231FF3910029AA3B /* OK4U.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OK4U.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ABB60408231FF3910029AA3B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		ABB6040A231FF3910029AA3B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -164,6 +166,7 @@
 				AB078933237CC5D000E7B2C6 /* NewsfeedTableViewController.swift */,
 				AB078931237CC5C500E7B2C6 /* NewsfeedTableViewCell.swift */,
 				AB078938237D27BB00E7B2C6 /* EventDetailViewController.swift */,
+				AB07893A237D289500E7B2C6 /* EventDetailCollectionViewCell.swift */,
 			);
 			path = NewsfeedPage;
 			sourceTree = "<group>";
@@ -507,6 +510,7 @@
 				AB078934237CC5D000E7B2C6 /* NewsfeedTableViewController.swift in Sources */,
 				ABB6043D232193CB0029AA3B /* LoginViewController.swift in Sources */,
 				ABB60411231FF3910029AA3B /* OK4U.xcdatamodeld in Sources */,
+				AB07893B237D289500E7B2C6 /* EventDetailCollectionViewCell.swift in Sources */,
 				AB078936237CF1B600E7B2C6 /* Globals.swift in Sources */,
 				AB03BE48234418F60018BE14 /* OKIntroTableViewController.swift in Sources */,
 				AB03BE4A234419130018BE14 /* OKIntroTableViewCell.swift in Sources */,
