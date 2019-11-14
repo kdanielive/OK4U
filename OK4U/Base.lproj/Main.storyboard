@@ -62,12 +62,11 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="mQt-G6-nPv"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="타임라인" id="jSx-Ia-PcF"/>
                     <navigationItem key="navigationItem" title="OK4U" id="dZA-5C-FIs"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Pi9-gE-wzq" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2577" y="404"/>
+            <point key="canvasLocation" x="3486.9565217391305" y="403.79464285714283"/>
         </scene>
         <!--설정-->
         <scene sceneID="mOm-y4-eK4">
@@ -93,35 +92,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ehe-KR-7ew" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3421.739130434783" y="154.6875"/>
-        </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="BND-Cs-K5x">
-            <objects>
-                <navigationController storyboardIdentifier="EntryView" automaticallyAdjustsScrollViewInsets="NO" modalPresentationStyle="fullScreen" id="cMU-5U-sbs" sceneMemberID="viewController">
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="c37-7b-U0D">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                        <color key="barTintColor" red="0.047058823529411764" green="0.2627450980392157" blue="0.1803921568627451" alpha="1" colorSpace="calibratedRGB"/>
-                        <textAttributes key="titleTextAttributes">
-                            <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
-                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        </textAttributes>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="TbY-mZ-o0f" kind="relationship" relationship="rootViewController" id="viy-8a-PIk"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dzj-dd-b6B" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="962" y="155"/>
+            <point key="canvasLocation" x="5242.0289855072469" y="154.6875"/>
         </scene>
         <!--OK4U with EstherFormula-->
         <scene sceneID="nyD-C6-mli">
             <objects>
-                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="TbY-mZ-o0f" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="EntryView" automaticallyAdjustsScrollViewInsets="NO" modalPresentationStyle="fullScreen" id="TbY-mZ-o0f" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationItem key="navigationItem" title="OK4U with EstherFormula" id="8pA-da-i0U"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="zqb-Ze-vQQ">
@@ -130,9 +106,9 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
                     <connections>
-                        <segue destination="GOu-Bh-nyf" kind="relationship" relationship="viewControllers" id="KM2-CH-SXH"/>
-                        <segue destination="5bG-6a-Cak" kind="relationship" relationship="viewControllers" id="0vZ-ea-tmd"/>
-                        <segue destination="LLN-rf-aP2" kind="relationship" relationship="viewControllers" id="jqj-05-1f3"/>
+                        <segue destination="3bI-3Q-8ot" kind="relationship" relationship="viewControllers" id="KM2-CH-SXH"/>
+                        <segue destination="tz0-fh-PHb" kind="relationship" relationship="viewControllers" id="0vZ-ea-tmd"/>
+                        <segue destination="zQq-BD-rP0" kind="relationship" relationship="viewControllers" id="jqj-05-1f3"/>
                         <segue destination="026-ID-leU" kind="relationship" relationship="viewControllers" id="4f7-Xg-kb9"/>
                     </connections>
                 </tabBarController>
@@ -140,7 +116,7 @@
             </objects>
             <point key="canvasLocation" x="1734.7826086956522" y="154.6875"/>
         </scene>
-        <!--오케이 소개-->
+        <!--Intro Table View Controller-->
         <scene sceneID="f0o-xI-ucY">
             <objects>
                 <tableViewController id="LLN-rf-aP2" customClass="OKIntroTableViewController" customModule="OK4U" customModuleProvider="target" sceneMemberID="viewController">
@@ -217,14 +193,14 @@
                             <outlet property="delegate" destination="LLN-rf-aP2" id="FB6-yE-5Nk"/>
                         </connections>
                     </tableView>
-                    <tabBarItem key="tabBarItem" title="오케이 소개" id="CWK-1R-aIe"/>
+                    <navigationItem key="navigationItem" id="R36-04-LL4"/>
                     <connections>
                         <segue destination="FxK-bc-3ZQ" kind="show" identifier="segueToNavBarToOKHistory" id="exL-kZ-KwV"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zAE-WG-tpc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2576.811594202899" y="1092.8571428571429"/>
+            <point key="canvasLocation" x="3486.9565217391305" y="1092.8571428571429"/>
         </scene>
         <!--OK4U with EstherFormula-->
         <scene sceneID="iTG-SD-Vad">
@@ -248,9 +224,9 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SXy-Ka-3Ok" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4274" y="1093"/>
+            <point key="canvasLocation" x="5184.057971014493" y="1092.8571428571429"/>
         </scene>
-        <!--뉴스피드-->
+        <!--Newsfeed Table View Controller-->
         <scene sceneID="QBx-SI-KoR">
             <objects>
                 <tableViewController id="GOu-Bh-nyf" customClass="NewsfeedTableViewController" customModule="OK4U" customModuleProvider="target" sceneMemberID="viewController">
@@ -259,7 +235,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="newsfeed" id="ubi-ly-2ft">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="newsfeed1" id="ubi-ly-2ft" customClass="NewsfeedTableViewCell" customModule="OK4U" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="ubi-ly-2ft" id="9tl-CR-kHt">
@@ -273,14 +249,13 @@
                             <outlet property="delegate" destination="GOu-Bh-nyf" id="ckB-Da-Bpb"/>
                         </connections>
                     </tableView>
-                    <tabBarItem key="tabBarItem" title="뉴스피드" id="Dhm-PU-jmo"/>
                     <navigationItem key="navigationItem" id="YUu-KS-vSP">
                         <barButtonItem key="rightBarButtonItem" title="Item" image="memories" catalog="system" id="HPF-he-W8k"/>
                     </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="y1u-s8-1PK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2577" y="-295"/>
+            <point key="canvasLocation" x="3461" y="-295"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="EjE-KY-r1B">
@@ -304,7 +279,67 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LIb-nw-bf6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <exit id="2g6-jf-Tqz" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="3422" y="1093"/>
+            <point key="canvasLocation" x="4331.884057971015" y="1092.8571428571429"/>
+        </scene>
+        <!--뉴스피드-->
+        <scene sceneID="Z7y-lZ-N0V">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="3bI-3Q-8ot" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="뉴스피드" id="Dhm-PU-jmo"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="bVO-N7-yv9">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="0.047058823530000002" green="0.26274509800000001" blue="0.18039215689999999" alpha="1" colorSpace="calibratedRGB"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="GOu-Bh-nyf" kind="relationship" relationship="rootViewController" id="gAZ-xO-Slx"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ikS-sS-qN4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2577" y="-295"/>
+        </scene>
+        <!--타임라인-->
+        <scene sceneID="LE2-8B-3pe">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="tz0-fh-PHb" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="타임라인" id="jSx-Ia-PcF"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="nwN-gI-eb1">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="0.047058823530000002" green="0.26274509800000001" blue="0.18039215689999999" alpha="1" colorSpace="calibratedRGB"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="5bG-6a-Cak" kind="relationship" relationship="rootViewController" id="PBv-Si-yXm"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ysu-yA-NjI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2576.811594202899" y="403.79464285714283"/>
+        </scene>
+        <!--오케이 소개-->
+        <scene sceneID="bIM-Jd-6yn">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="zQq-BD-rP0" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="오케이 소개" id="CWK-1R-aIe"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="HuR-aF-CVL">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="0.047058823530000002" green="0.26274509800000001" blue="0.18039215689999999" alpha="1" colorSpace="calibratedRGB"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="LLN-rf-aP2" kind="relationship" relationship="rootViewController" id="XNI-xS-MKc"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9JL-Nq-spN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2576.811594202899" y="1092.8571428571429"/>
         </scene>
     </scenes>
     <resources>
