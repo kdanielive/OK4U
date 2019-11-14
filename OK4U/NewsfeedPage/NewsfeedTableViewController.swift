@@ -128,6 +128,9 @@ class NewsfeedTableViewController: UITableViewController {
         }
     }
     
+    @IBAction func unwindToNewsfeed(segue:UIStoryboardSegue) { }
+
+    
     /*
     override func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         let headerView = UIView(frame: CGRect(x: 0, y: 0, width: tableView.bounds.size.width, height: 30))

@@ -62,11 +62,18 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="mQt-G6-nPv"/>
                     </view>
-                    <navigationItem key="navigationItem" title="OK4U with EstherFormula" id="dZA-5C-FIs"/>
+                    <navigationItem key="navigationItem" id="gSS-qV-42M">
+                        <barButtonItem key="rightBarButtonItem" title="Done" id="vUN-Py-HAH">
+                            <connections>
+                                <segue destination="ffr-Rt-P8j" kind="unwind" unwindAction="unwindToNewsfeedWithSegue:" id="ABh-DU-0Mm"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Pi9-gE-wzq" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="ffr-Rt-P8j" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="4332" y="-605"/>
+            <point key="canvasLocation" x="5093" y="-613"/>
         </scene>
         <!--설정-->
         <scene sceneID="mOm-y4-eK4">
@@ -92,7 +99,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ehe-KR-7ew" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5242.0289855072469" y="154.6875"/>
+            <point key="canvasLocation" x="2577" y="381"/>
         </scene>
         <!--OK4U with EstherFormula-->
         <scene sceneID="nyD-C6-mli">
@@ -244,7 +251,7 @@
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <connections>
-                                    <segue destination="5bG-6a-Cak" kind="presentation" id="bhH-gt-BH0"/>
+                                    <segue destination="3xJ-4D-Xoi" kind="presentation" id="bhH-gt-BH0"/>
                                 </connections>
                             </tableViewCell>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="newsfeed2" id="MK4-q8-Vsp" customClass="NewsfeedTableViewCell" customModule="OK4U" customModuleProvider="target">
@@ -255,7 +262,7 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <segue destination="xVu-Hr-bRh" kind="presentation" id="AQH-cP-HTO"/>
+                                    <segue destination="WGm-vl-5Y5" kind="presentation" id="AQH-cP-HTO"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -282,10 +289,18 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="WMV-WI-ExW"/>
                     </view>
+                    <navigationItem key="navigationItem" id="LrU-vn-v2g">
+                        <barButtonItem key="rightBarButtonItem" title="Done" id="INV-MG-sAf">
+                            <connections>
+                                <segue destination="l4F-TY-UWr" kind="unwind" unwindAction="unwindToNewsfeedWithSegue:" id="CV0-6V-Pah"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="i4d-YY-b77" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="l4F-TY-UWr" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="4332" y="77"/>
+            <point key="canvasLocation" x="5093" y="97"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="EjE-KY-r1B">
@@ -356,6 +371,42 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9JL-Nq-spN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2576.811594202899" y="1092.8571428571429"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="FKv-GM-Bsr">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="WGm-vl-5Y5" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="G47-vP-S2L">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="56"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="xVu-Hr-bRh" kind="relationship" relationship="rootViewController" id="qht-Tv-wR7"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gBH-Xn-QLD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4332" y="97"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="cAZ-ol-eTl">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="3xJ-4D-Xoi" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Ofq-I3-GGC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="56"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="5bG-6a-Cak" kind="relationship" relationship="rootViewController" id="mso-B6-TLM"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0B2-jp-5MB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4331.884057971015" y="-613.39285714285711"/>
         </scene>
     </scenes>
     <resources>
