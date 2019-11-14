@@ -37,43 +37,56 @@ class NewsfeedTableViewController: UITableViewController {
         if(section==0) {
             return 1
         } else {
-            return 2
+            return 0
         }
     }
 
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "newsfeed1", for: indexPath) as! NewsfeedTableViewCell
-        let backgroundImage = UIImage(named: "ok20191")!
-        let backgroundImageView = UIImageView(image: backgroundImage)
-        
-        let ratio = backgroundImage.size.height / backgroundImage.size.width
-        let backgroundWidth = self.view.frame.width
-        backgroundImageView.frame = CGRect(x: 0, y: 0, width: backgroundWidth, height: ratio*backgroundWidth)
-        backgroundImageView.alpha = 0.5
-        
-        let soonView = UILabel()
-        let padding = CGFloat(20)
-        soonView.text = "Coming soon..."
-        soonView.font = UIFont.boldSystemFont(ofSize: 20)
-        soonView.frame = CGRect(x: padding, y: padding, width: self.view.frame.width - padding*2, height: CGFloat(40))
-        soonView.sizeToFit()
-        soonView.textColor = UIColor(red: 12/255, green: 67/255, blue: 46/255, alpha: 0.7)
-        soonView.textColor = UIColor.black
+        if(indexPath.section==0)  {
+            let cell = tableView.dequeueReusableCell(withIdentifier: "newsfeed1", for: indexPath) as! NewsfeedTableViewCell
+            let backgroundImage = UIImage(named: "newscardtestimage")!
+            let backgroundImageView = UIImageView(image: backgroundImage)
+            
+            let ratio = backgroundImage.size.height / backgroundImage.size.width
+            let backgroundWidth = self.view.frame.width
+            backgroundImageView.frame = CGRect(x: 0, y: 0, width: backgroundWidth, height: ratio*backgroundWidth)
+            backgroundImageView.alpha = 0.5
+            backgroundImageView.contentMode = .scaleAspectFit
+            
+            let soonView = UILabel()
+            let padding = CGFloat(20)
+            soonView.text = "Upcoming Event..."
+            soonView.font = UIFont.boldSystemFont(ofSize: 25)
+            soonView.center = CGPoint(x: cell.frame.size.width/4, y: cell.frame.size.height/4)
+            soonView.sizeToFit()
+            soonView.textColor = UIColor(red: 12/255, green: 67/255, blue: 46/255, alpha: 1.0)
+            
+            soonView.layer.shadowColor = UIColor.black.cgColor
+            soonView.layer.shadowRadius = 2.0
+            soonView.layer.shadowOpacity = 0.5
+            soonView.layer.shadowOffset = CGSize(width: 4, height: 4)
+            soonView.layer.masksToBounds = false
 
-        cell.addSubview(backgroundImageView)
-        cell.addSubview(soonView)
-        // Configure the cell...
+            cell.addSubview(backgroundImageView)
+            cell.addSubview(soonView)
+            // Configure the cell...
 
-        return cell
+            return cell
+        } else {
+            let cell = tableView.dequeueReusableCell(withIdentifier: "newsfeed1", for: indexPath) as! NewsfeedTableViewCell
+            return cell
+        }
     }
     
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        /*
         let backgroundImage = UIImage(named: "ok20191")!
         let ratio = backgroundImage.size.height / backgroundImage.size.width
         let backgroundWidth = self.view.frame.width
+        */
 
-        return ratio*backgroundWidth
+        return self.view.frame.size.height / 3
     }
     
     /*
