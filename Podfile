@@ -13,6 +13,7 @@ target 'OK4U' do
   pod 'SideMenu'
   pod 'Firebase/Firestore'
   pod 'Firebase/Core'
+  pod 'Firebase/Storage'
 
   target 'OK4UTests' do
     inherit! :search_paths
