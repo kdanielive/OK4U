@@ -7,11 +7,34 @@
 //
 
 import UIKit
+import Firebase
 
 class NewsfeedTableViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        let db = Firestore.firestore()
+        db.collection("events").getDocuments() { (querySnapshot, err) in
+            if let err = err {
+                print("Error getting documents: \(err)")
+            } else {
+                for document in querySnapshot!.documents {
+                    let data = document.data()
+                    let name = data["name"] as! String
+                    let description = data["description"] as! String
+                    let date = data["date"] as! String
+                    let primary = data["primary"] as! Bool
+                    let imageNav = data["imageNav"] as! String
+                    let event = Event(name: name, date: date, description: description, primary: primary, imageNav: imageNav)
+                    if(primary==true) {
+                        primaryEvent = event
+                    }
+                    events.append(event)
+                }
+            }
+            self.tableView.reloadData()
+        }
     
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
@@ -33,11 +56,7 @@ class NewsfeedTableViewController: UITableViewController {
 
     override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        if(unfurl_upcoming) {
-            return 2
-        } else {
-            return 1
-        }
+        return 2
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -45,7 +64,7 @@ class NewsfeedTableViewController: UITableViewController {
         if(section==0) {
             return 1
         } else {
-            return 10
+            return events.count
         }
     }
 

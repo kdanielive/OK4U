@@ -22,3 +22,7 @@ Location: 91 E 3rd Street, NY
 Ticket: Regular - $25, At the door - $30
 RSVP Link in Bio
 """
+
+var events = [Event]()
+
+var primaryEvent:Event?
