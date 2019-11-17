@@ -10,8 +10,8 @@ import UIKit
 
 class SideMenuViewController: UIViewController {
 
-    @IBOutlet var loginButton: UIButton!
     @IBOutlet var profileImage: UIImageView!
+    @IBOutlet var raffleLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()

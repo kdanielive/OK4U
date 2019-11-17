@@ -376,43 +376,46 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="장현화image" translatesAutoresizingMaskIntoConstraints="NO" id="CAu-dM-jAz">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="barOKLogo" translatesAutoresizingMaskIntoConstraints="NO" id="CAu-dM-jAz">
                                 <rect key="frame" x="143" y="76" width="128" height="128"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="128" id="6PS-Ng-Cm1"/>
                                     <constraint firstAttribute="width" constant="128" id="u9o-Ge-PIK"/>
                                 </constraints>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="L1Z-0q-31N">
-                                <rect key="frame" x="184.5" y="214" width="45" height="34"/>
-                                <state key="normal" title="Login">
-                                    <color key="titleColor" red="0.1500616189" green="0.32131397719999999" blue="0.21565667229999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                </state>
-                            </button>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8Fb-aI-fcx">
-                                <rect key="frame" x="0.0" y="268" width="414" height="540"/>
+                                <rect key="frame" x="0.0" y="254" width="414" height="554"/>
                                 <connections>
                                     <segue destination="nSe-tV-x2e" kind="embed" id="ePt-fL-vvj"/>
                                 </connections>
                             </containerView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nAn-Ly-R2M">
+                                <rect key="frame" x="186" y="214" width="42" height="20"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="20" id="FAD-Ye-RQq"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="CAu-dM-jAz" firstAttribute="centerX" secondItem="FFb-7B-QSv" secondAttribute="centerX" id="Agp-db-Qww"/>
-                            <constraint firstItem="8Fb-aI-fcx" firstAttribute="top" secondItem="L1Z-0q-31N" secondAttribute="bottom" constant="20" id="C2v-pq-lL7"/>
+                            <constraint firstItem="nAn-Ly-R2M" firstAttribute="centerX" secondItem="FFb-7B-QSv" secondAttribute="centerX" id="FAZ-sc-YkA"/>
                             <constraint firstItem="CAu-dM-jAz" firstAttribute="top" secondItem="FFb-7B-QSv" secondAttribute="top" constant="20" id="GLy-sZ-B7d"/>
-                            <constraint firstItem="L1Z-0q-31N" firstAttribute="centerX" secondItem="CAu-dM-jAz" secondAttribute="centerX" id="Jht-aY-7mw"/>
+                            <constraint firstItem="nAn-Ly-R2M" firstAttribute="top" secondItem="CAu-dM-jAz" secondAttribute="bottom" constant="10" id="Nc0-df-e4m"/>
                             <constraint firstItem="8Fb-aI-fcx" firstAttribute="leading" secondItem="FFb-7B-QSv" secondAttribute="leading" id="QH9-Kc-non"/>
                             <constraint firstItem="FFb-7B-QSv" firstAttribute="trailing" secondItem="8Fb-aI-fcx" secondAttribute="trailing" id="XP9-t4-V3j"/>
+                            <constraint firstItem="8Fb-aI-fcx" firstAttribute="top" secondItem="nAn-Ly-R2M" secondAttribute="bottom" constant="20" id="ahs-cA-H7V"/>
                             <constraint firstItem="FFb-7B-QSv" firstAttribute="bottom" secondItem="8Fb-aI-fcx" secondAttribute="bottom" id="bkX-dr-ixu"/>
-                            <constraint firstItem="L1Z-0q-31N" firstAttribute="top" secondItem="CAu-dM-jAz" secondAttribute="bottom" constant="10" id="cGj-jI-U9D"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="FFb-7B-QSv"/>
                     </view>
                     <navigationItem key="navigationItem" id="151-no-zxl"/>
                     <connections>
-                        <outlet property="loginButton" destination="L1Z-0q-31N" id="qPN-2B-uj0"/>
                         <outlet property="profileImage" destination="CAu-dM-jAz" id="ZiY-XP-uFZ"/>
+                        <outlet property="raffleLabel" destination="nAn-Ly-R2M" id="Un0-3B-6Lq"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mDb-gR-J0z" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -424,7 +427,7 @@
             <objects>
                 <tableViewController id="nSe-tV-x2e" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="x5u-H9-hyO">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="540"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="554"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <sections>
@@ -584,8 +587,8 @@
     <resources>
         <image name="OKLogo" width="1248" height="243"/>
         <image name="arrow.turn.down.left" catalog="system" width="64" height="48"/>
+        <image name="barOKLogo" width="400" height="400"/>
         <image name="list.dash" catalog="system" width="64" height="44"/>
-        <image name="장현화image" width="500" height="500"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="bhH-gt-BH0"/>
