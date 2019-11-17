@@ -26,7 +26,8 @@ class NewsfeedTableViewController: UITableViewController {
                     let date = data["date"] as! String
                     let primary = data["primary"] as! Bool
                     let imageNav = data["imageNav"] as! String
-                    let event = Event(name: name, date: date, description: description, primary: primary, imageNav: imageNav)
+                    let event = Event(name: name, date: date, description: description, primary: primary, imageNav: imageNav, image: nil)
+                    self.downloadImage(imageName: "/Newsfeed/\(name).png", event: event)
                     if(primary==true) {
                         primaryEvent = event
                     }
@@ -37,19 +38,6 @@ class NewsfeedTableViewController: UITableViewController {
             self.tableView.reloadData()
         }
         
-        let reference = Storage.storage().reference(withPath: "\(folderPath)/0.jpg")
-        reference.getData(maxSize: (1 * 1024 * 1024)) { (data, error) in
-            if let _error = error{
-                print(_error)
-                failure(_error)
-            } else {
-                if let _data  = data {
-                    let myImage:UIImage! = UIImage(data: _data)
-                    success(myImage)
-                }
-            }
-        }
-    
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
@@ -57,10 +45,27 @@ class NewsfeedTableViewController: UITableViewController {
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
     }
     
+    func downloadImage(imageName: String, event: Event) {
+        let storage = Storage.storage()
+        let storageRef = storage.reference()
+        let imagesRef = storageRef.child("\(imageName)")
+        print("Printing: ", imageName)
+        
+        imagesRef.getData(maxSize: 3 * 1024 * 1024, completion: { data, error in
+            if let error = error {
+                print(error)
+            } else {
+                let image = UIImage(data: data!)
+                event.image = image
+            }
+        })
+    }
+    
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let row = indexPath.row
         eventRowId = row
         print(eventRowId)
+        
     }
     
     override func viewWillAppear(_ animated: Bool) {

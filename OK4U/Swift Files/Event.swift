@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import UIKit
 
 class Event {
     
@@ -15,12 +16,14 @@ class Event {
     let description: String
     let primary: Bool
     let imageNav: String
+    var image: UIImage?
 
-    init(name:String, date: String, description: String, primary: Bool, imageNav:String) {
+    init(name:String, date: String, description: String, primary: Bool, imageNav:String, image:UIImage?) {
         self.name = name
         self.description = description
         self.date = date
         self.primary = primary
         self.imageNav = imageNav
+        self.image = nil
     }
 }
