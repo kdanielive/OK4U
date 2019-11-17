@@ -16,8 +16,6 @@ class SideMenuViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        loginButton.layer.borderWidth = 1
-
         // Do any additional setup after loading the view.
     }
     
