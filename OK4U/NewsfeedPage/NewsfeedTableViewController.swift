@@ -36,6 +36,19 @@ class NewsfeedTableViewController: UITableViewController {
             events = events.sorted(by: { $0.date > $1.date })
             self.tableView.reloadData()
         }
+        
+        let reference = Storage.storage().reference(withPath: "\(folderPath)/0.jpg")
+        reference.getData(maxSize: (1 * 1024 * 1024)) { (data, error) in
+            if let _error = error{
+                print(_error)
+                failure(_error)
+            } else {
+                if let _data  = data {
+                    let myImage:UIImage! = UIImage(data: _data)
+                    success(myImage)
+                }
+            }
+        }
     
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
