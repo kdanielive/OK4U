@@ -352,9 +352,10 @@
                     </tableView>
                     <toolbarItems/>
                     <navigationItem key="navigationItem" id="YUu-KS-vSP">
-                        <barButtonItem key="leftBarButtonItem" title="Item" image="OKLogo" id="qcf-Pz-esR">
+                        <barButtonItem key="leftBarButtonItem" title="Item" image="OKLogo" id="KUd-1w-4rm">
                             <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="Item" id="Pob-tl-IgP"/>
                     </navigationItem>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                 </tableViewController>
@@ -401,6 +402,9 @@
                         </textAttributes>
                     </navigationBar>
                     <nil name="viewControllers"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="leftSide" value="NO"/>
+                    </userDefinedRuntimeAttributes>
                     <connections>
                         <segue destination="GOu-Bh-nyf" kind="relationship" relationship="rootViewController" id="gAZ-xO-Slx"/>
                     </connections>
