@@ -10,6 +10,8 @@ import UIKit
 import Firebase
 
 class NewsfeedTableViewController: UITableViewController {
+    
+    var backgroundImageView = UIImageView()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -63,13 +65,13 @@ class NewsfeedTableViewController: UITableViewController {
                 event.image = image
                 print("Success")
             }
+            self.tableView.reloadData()
         })
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let row = indexPath.row
         eventRowId = row
-        print(eventRowId)
         
     }
     
@@ -102,8 +104,11 @@ class NewsfeedTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if(indexPath.section==0)  {
             let cell = tableView.dequeueReusableCell(withIdentifier: "newsfeed1", for: indexPath) as! NewsfeedTableViewCell
-            let backgroundImage = UIImage(named: "newscardtestimage")!
-            let backgroundImageView = UIImageView(image: backgroundImage)
+            var backgroundImage = UIImage(named: "newscardtestimage")!
+            if(primaryEvent?.image != nil) {
+                backgroundImage = primaryEvent!.image!
+            }
+            backgroundImageView = UIImageView(image: backgroundImage)
             
             let ratio = backgroundImage.size.height / backgroundImage.size.width
             let backgroundWidth = self.view.frame.width
@@ -137,7 +142,7 @@ class NewsfeedTableViewController: UITableViewController {
             
             // Background Image Part
             let backgroundImage = UIImage(named: "ok20191")!
-            let backgroundImageView = UIImageView()
+            backgroundImageView = UIImageView()
             backgroundImageView.contentMode = .scaleAspectFill
             backgroundImageView.image = backgroundImage
             
