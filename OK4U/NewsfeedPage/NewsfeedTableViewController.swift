@@ -27,7 +27,7 @@ class NewsfeedTableViewController: UITableViewController {
                     let primary = data["primary"] as! Bool
                     let imageNav = data["imageNav"] as! String
                     let event = Event(name: name, date: date, description: description, primary: primary, imageNav: imageNav, image: nil)
-                    self.downloadImage(imageName: "/Newsfeed/\(name).png", event: event)
+                    self.downloadImage(imageName: "/Newsfeed/\(imageNav).png", event: event)
                     if(primary==true) {
                         primaryEvent = event
                     }
@@ -36,6 +36,11 @@ class NewsfeedTableViewController: UITableViewController {
             }
             events = events.sorted(by: { $0.date > $1.date })
             self.tableView.reloadData()
+            
+            
+            let storage = Storage.storage()
+            let storageRef = storage.reference()
+            let imagesRef = storageRef.child("Newsfeed/sticker.jpg")
         }
         
         // Uncomment the following line to preserve selection between presentations
@@ -49,7 +54,6 @@ class NewsfeedTableViewController: UITableViewController {
         let storage = Storage.storage()
         let storageRef = storage.reference()
         let imagesRef = storageRef.child("\(imageName)")
-        print("Printing: ", imageName)
         
         imagesRef.getData(maxSize: 3 * 1024 * 1024, completion: { data, error in
             if let error = error {
@@ -57,6 +61,7 @@ class NewsfeedTableViewController: UITableViewController {
             } else {
                 let image = UIImage(data: data!)
                 event.image = image
+                print("Success")
             }
         })
     }
