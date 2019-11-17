@@ -17,7 +17,7 @@ class EventDetailViewController: UIViewController, UICollectionViewDataSource, U
     @IBOutlet var eventDescriptionLabel: UILabel!
     
     @IBAction func showDescription(_ sender: Any) {
-        let alert = UIAlertController(title: "Event Description", message: eventDescription, preferredStyle: UIAlertController.Style.alert)
+        let alert = UIAlertController(title: "Event Description", message: events[eventRowId!].description, preferredStyle: UIAlertController.Style.alert)
         alert.addAction(UIAlertAction(title: "옼케이~", style: .default, handler: nil))
         self.navigationController?.present(alert, animated: false, completion: nil)
     }
@@ -51,10 +51,12 @@ class EventDetailViewController: UIViewController, UICollectionViewDataSource, U
         eventCollectionView.layer.borderColor = UIColor(red: 12/255, green: 67/255, blue: 46/255, alpha: 1.0).cgColor
         
         eventTitleLabel.text = "2019 옼식당"
+        eventTitleLabel.text = events[eventRowId!].name
         eventTitleLabel.font = UIFont.boldSystemFont(ofSize: 20)
         eventTitleLabel.textColor = UIColor(red: 12/255, green: 67/255, blue: 46/255, alpha: 1.0)
         
         eventDescriptionLabel.text = eventDescription
+        eventDescriptionLabel.text = events[eventRowId!].description
         eventDescriptionLabel.textColor = UIColor(red: 12/255, green: 67/255, blue: 46/255, alpha: 1.0)
 	
         // Do any additional setup after loading the view.

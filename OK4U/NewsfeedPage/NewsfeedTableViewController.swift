@@ -33,6 +33,7 @@ class NewsfeedTableViewController: UITableViewController {
                     events.append(event)
                 }
             }
+            events = events.sorted(by: { $0.date > $1.date })
             self.tableView.reloadData()
         }
     
@@ -41,6 +42,12 @@ class NewsfeedTableViewController: UITableViewController {
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
+    }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let row = indexPath.row
+        eventRowId = row
+        print(eventRowId)
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -102,7 +109,7 @@ class NewsfeedTableViewController: UITableViewController {
             return cell
         } else {
             let cell = tableView.dequeueReusableCell(withIdentifier: "newsfeed2", for: indexPath) as! NewsfeedTableViewCell
-            
+            let row = indexPath.row
             let padding = CGFloat(5)
             
             // Background Image Part
@@ -120,6 +127,7 @@ class NewsfeedTableViewController: UITableViewController {
             // Date Label Part
             let dateLabel = UILabel()
             dateLabel.text = "2019/11"
+            dateLabel.text = events[row].date
             dateLabel.font = UIFont.boldSystemFont(ofSize: 15)
             dateLabel.textColor = UIColor(red: 12/255, green: 67/255, blue: 46/255, alpha: 1.0)
             dateLabel.backgroundColor = UIColor.white
@@ -130,6 +138,7 @@ class NewsfeedTableViewController: UITableViewController {
             // Title Label Part
             let titleLabel = UILabel()
             titleLabel.text = "옼식당"
+            titleLabel.text = events[row].name
             titleLabel.font = UIFont.boldSystemFont(ofSize: 15)
             titleLabel.textColor = UIColor(red: 12/255, green: 67/255, blue: 46/255, alpha: 1.0)
             titleLabel.backgroundColor = UIColor.white

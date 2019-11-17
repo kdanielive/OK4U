@@ -26,3 +26,5 @@ RSVP Link in Bio
 var events = [Event]()
 
 var primaryEvent:Event?
+
+var eventRowId:Int?
