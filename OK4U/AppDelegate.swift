@@ -60,6 +60,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
         GIDSignIn.sharedInstance().clientID = FirebaseApp.app()?.options.clientID
         GIDSignIn.sharedInstance().delegate = self
 
+        /*
         // Dealing with the database
         let ref = Database.database().reference()
         ref.child("members").observe(.value, with: {(snapshot) in
@@ -69,6 +70,18 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
                 memberNames.append((item["name"] as! String))
             }
         })
+        */
+        let db = Firestore.firestore()
+        db.collection("events").getDocuments() { (querySnapshot, err) in
+            if let err = err {
+                print("Error getting documents: \(err)")
+            } else {
+                for document in querySnapshot!.documents {
+                    print("\(document.documentID) => \(document.data())")
+                }
+            }
+        }
+        
         return true
     }
 

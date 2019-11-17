@@ -16,6 +16,8 @@ class SideMenuViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        raffleLabel.textColor = UIColor(red: 12/255, green: 67/255, blue: 46/255, alpha: 1.0)
+        
         // Do any additional setup after loading the view.
     }
     
