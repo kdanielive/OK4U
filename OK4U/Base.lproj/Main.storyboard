@@ -20,7 +20,7 @@
                                 <rect key="frame" x="57" y="210" width="300" height="179"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aIw-86-XEN">
-                                <rect key="frame" x="57" y="614" width="300" height="33"/>
+                                <rect key="frame" x="57" y="857" width="300" height="33"/>
                                 <constraints>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="300" id="IkM-RN-b7Z"/>
                                     <constraint firstAttribute="width" constant="300" id="hNm-4a-35n"/>
@@ -355,7 +355,9 @@
                         <barButtonItem key="leftBarButtonItem" title="Item" image="OKLogo" id="KUd-1w-4rm">
                             <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" title="Item" id="Pob-tl-IgP"/>
+                        <barButtonItem key="rightBarButtonItem" title="Item" image="list.dash" catalog="system" id="Pob-tl-IgP">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </barButtonItem>
                     </navigationItem>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                 </tableViewController>
@@ -458,6 +460,7 @@
     <resources>
         <image name="OKLogo" width="1248" height="243"/>
         <image name="arrow.turn.down.left" catalog="system" width="64" height="48"/>
+        <image name="list.dash" catalog="system" width="64" height="44"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="bhH-gt-BH0"/>
