@@ -9,7 +9,9 @@
 import UIKit
 
 class NewsfeedTableViewCell: UITableViewCell {
-
+    
+    @IBOutlet var backgroundImageView: UIImageView!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -21,4 +23,11 @@ class NewsfeedTableViewCell: UITableViewCell {
         // Configure the view for the selected state
     }
 
+    override func prepareForReuse() {
+        super.prepareForReuse()
+        
+        for subview in self.subviews {
+            subview.isHidden = true
+        }
+    }
 }

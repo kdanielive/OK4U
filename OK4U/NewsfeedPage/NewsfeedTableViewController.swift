@@ -10,8 +10,6 @@ import UIKit
 import Firebase
 
 class NewsfeedTableViewController: UITableViewController {
-    
-    var backgroundImageView = UIImageView()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -104,17 +102,18 @@ class NewsfeedTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if(indexPath.section==0)  {
             let cell = tableView.dequeueReusableCell(withIdentifier: "newsfeed1", for: indexPath) as! NewsfeedTableViewCell
+
             var backgroundImage = UIImage(named: "newscardtestimage")!
             if(primaryEvent?.image != nil) {
                 backgroundImage = primaryEvent!.image!
             }
-            backgroundImageView = UIImageView(image: backgroundImage)
+            cell.backgroundImageView = UIImageView(image: backgroundImage)
             
             let ratio = backgroundImage.size.height / backgroundImage.size.width
             let backgroundWidth = self.view.frame.width
-            backgroundImageView.frame = CGRect(x: 0, y: 0, width: backgroundWidth, height: ratio*backgroundWidth)
-            backgroundImageView.alpha = 0.4
-            backgroundImageView.contentMode = .scaleAspectFit
+            cell.backgroundImageView.frame = CGRect(x: 0, y: 0, width: backgroundWidth, height: ratio*backgroundWidth)
+            cell.backgroundImageView.alpha = 0.4
+            cell.backgroundImageView.contentMode = .scaleAspectFit
             
             let soonView = UILabel()
             let padding = CGFloat(20)
@@ -130,7 +129,18 @@ class NewsfeedTableViewController: UITableViewController {
             soonView.layer.shadowOffset = CGSize(width: 4, height: 4)
             soonView.layer.masksToBounds = false
 
-            cell.addSubview(backgroundImageView)
+            if(primaryEvent?.image == nil) {
+                let loadingLabel = UILabel()
+                loadingLabel.text = "Loading..."
+                loadingLabel.textColor = UIColor(red: 12/255, green: 67/255, blue: 46/255, alpha: 1.0)
+                loadingLabel.font = UIFont.boldSystemFont(ofSize: 20)
+                loadingLabel.textAlignment = .center
+                loadingLabel.frame = CGRect(x: 0, y: 0, width: 120, height: 40)
+                loadingLabel.center = CGPoint(x: cell.contentView.center.x, y: cell.contentView.center.y)
+                cell.addSubview(loadingLabel)
+            } else {
+                cell.addSubview(cell.backgroundImageView)
+            }
             cell.addSubview(soonView)
             // Configure the cell...
 
@@ -141,16 +151,30 @@ class NewsfeedTableViewController: UITableViewController {
             let padding = CGFloat(5)
             
             // Background Image Part
-            let backgroundImage = UIImage(named: "ok20191")!
-            backgroundImageView = UIImageView()
-            backgroundImageView.contentMode = .scaleAspectFill
-            backgroundImageView.image = backgroundImage
+            var backgroundImage = UIImage(named: "ok20191")!
+            if(events[row].image != nil) {
+                backgroundImage = events[row].image!
+            }
+            cell.backgroundImageView = UIImageView()
+            cell.backgroundImageView.contentMode = .scaleAspectFill
+            cell.backgroundImageView.image = backgroundImage
             
-            backgroundImageView.frame = CGRect(x: padding, y: padding, width: cell.frame.width-padding*2, height: cell.frame.height-padding*2)
-            backgroundImageView.alpha = 1.0
-            backgroundImageView.clipsToBounds = true
+            cell.backgroundImageView.frame = CGRect(x: padding, y: padding, width: cell.frame.width-padding*2, height: cell.frame.height-padding*2)
+            cell.backgroundImageView.alpha = 1.0
+            cell.backgroundImageView.clipsToBounds = true
             
-            cell.addSubview(backgroundImageView)
+            if(events[row].image == nil) {
+                let loadingLabel = UILabel()
+                loadingLabel.text = "Loading..."
+                loadingLabel.textColor = UIColor(red: 12/255, green: 67/255, blue: 46/255, alpha: 1.0)
+                loadingLabel.font = UIFont.boldSystemFont(ofSize: 20)
+                loadingLabel.textAlignment = .center
+                loadingLabel.frame = CGRect(x: 0, y: 0, width: 120, height: 40)
+                loadingLabel.center = CGPoint(x: cell.contentView.center.x, y: cell.contentView.center.y)
+                cell.addSubview(loadingLabel)
+            } else {
+                cell.addSubview(cell.backgroundImageView)
+            }
             
             // Date Label Part
             let dateLabel = UILabel()
@@ -161,7 +185,7 @@ class NewsfeedTableViewController: UITableViewController {
             dateLabel.backgroundColor = UIColor.white
             dateLabel.frame = CGRect(x: padding, y: padding, width: 0, height: 0)
             dateLabel.sizeToFit()
-            backgroundImageView.addSubview(dateLabel)
+            cell.backgroundImageView.addSubview(dateLabel)
             
             // Title Label Part
             let titleLabel = UILabel()
@@ -171,9 +195,9 @@ class NewsfeedTableViewController: UITableViewController {
             titleLabel.textColor = UIColor(red: 12/255, green: 67/255, blue: 46/255, alpha: 1.0)
             titleLabel.backgroundColor = UIColor.white
             titleLabel.sizeToFit()
-            titleLabel.frame = CGRect(x: backgroundImageView.frame.width-padding-titleLabel.frame.width, y: backgroundImageView.frame.height-padding-titleLabel.frame.height, width: 0, height: 0)
+            titleLabel.frame = CGRect(x: cell.backgroundImageView.frame.width-padding-titleLabel.frame.width, y: cell.backgroundImageView.frame.height-padding-titleLabel.frame.height, width: 0, height: 0)
             titleLabel.sizeToFit()
-            backgroundImageView.addSubview(titleLabel)
+            cell.backgroundImageView.addSubview(titleLabel)
             
             return cell
         }
