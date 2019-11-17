@@ -21,6 +21,8 @@
 		AB078936237CF1B600E7B2C6 /* Globals.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB078935237CF1B600E7B2C6 /* Globals.swift */; };
 		AB078939237D27BB00E7B2C6 /* EventDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB078938237D27BB00E7B2C6 /* EventDetailViewController.swift */; };
 		AB07893B237D289500E7B2C6 /* EventDetailCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB07893A237D289500E7B2C6 /* EventDetailCollectionViewCell.swift */; };
+		AB07893E2381015800E7B2C6 /* SideMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB07893D2381015800E7B2C6 /* SideMenuViewController.swift */; };
+		AB078942238102CA00E7B2C6 /* LaunchScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB078941238102CA00E7B2C6 /* LaunchScreenViewController.swift */; };
 		ABB60409231FF3910029AA3B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABB60408231FF3910029AA3B /* AppDelegate.swift */; };
 		ABB6040B231FF3910029AA3B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABB6040A231FF3910029AA3B /* ViewController.swift */; };
 		ABB6040E231FF3910029AA3B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ABB6040C231FF3910029AA3B /* Main.storyboard */; };
@@ -71,6 +73,8 @@
 		AB078935237CF1B600E7B2C6 /* Globals.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Globals.swift; sourceTree = "<group>"; };
 		AB078938237D27BB00E7B2C6 /* EventDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventDetailViewController.swift; sourceTree = "<group>"; };
 		AB07893A237D289500E7B2C6 /* EventDetailCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventDetailCollectionViewCell.swift; sourceTree = "<group>"; };
+		AB07893D2381015800E7B2C6 /* SideMenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuViewController.swift; sourceTree = "<group>"; };
+		AB078941238102CA00E7B2C6 /* LaunchScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchScreenViewController.swift; sourceTree = "<group>"; };
 		ABB60405231FF3910029AA3B /* OK4U.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OK4U.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ABB60408231FF3910029AA3B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		ABB6040A231FF3910029AA3B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -181,6 +185,22 @@
 			path = "Swift Files";
 			sourceTree = "<group>";
 		};
+		AB07893C2381014500E7B2C6 /* SideMenu */ = {
+			isa = PBXGroup;
+			children = (
+				AB07893D2381015800E7B2C6 /* SideMenuViewController.swift */,
+			);
+			path = SideMenu;
+			sourceTree = "<group>";
+		};
+		AB07893F238102B400E7B2C6 /* LaunchScreen */ = {
+			isa = PBXGroup;
+			children = (
+				AB078941238102CA00E7B2C6 /* LaunchScreenViewController.swift */,
+			);
+			path = LaunchScreen;
+			sourceTree = "<group>";
+		};
 		ABB603FC231FF3910029AA3B = {
 			isa = PBXGroup;
 			children = (
@@ -206,7 +226,9 @@
 		ABB60407231FF3910029AA3B /* OK4U */ = {
 			isa = PBXGroup;
 			children = (
+				AB07893F238102B400E7B2C6 /* LaunchScreen */,
 				AB03BE50234689180018BE14 /* Swift Files */,
+				AB07893C2381014500E7B2C6 /* SideMenu */,
 				AB03BE4B23448D0A0018BE14 /* NewsfeedPage */,
 				AB03BE46234418C00018BE14 /* OKIntroPage */,
 				AB03BE43234416D50018BE14 /* SettingsPage */,
@@ -511,9 +533,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AB07893E2381015800E7B2C6 /* SideMenuViewController.swift in Sources */,
 				AB078934237CC5D000E7B2C6 /* NewsfeedTableViewController.swift in Sources */,
 				ABB6043D232193CB0029AA3B /* LoginViewController.swift in Sources */,
 				ABB60411231FF3910029AA3B /* OK4U.xcdatamodeld in Sources */,
+				AB078942238102CA00E7B2C6 /* LaunchScreenViewController.swift in Sources */,
 				AB07893B237D289500E7B2C6 /* EventDetailCollectionViewCell.swift in Sources */,
 				AB078936237CF1B600E7B2C6 /* Globals.swift in Sources */,
 				AB03BE48234418F60018BE14 /* OKIntroTableViewController.swift in Sources */,
