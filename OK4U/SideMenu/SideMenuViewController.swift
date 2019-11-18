@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Firebase
 
 class SideMenuViewController: UIViewController {
 
@@ -17,8 +18,50 @@ class SideMenuViewController: UIViewController {
         super.viewDidLoad()
         
         raffleLabel.textColor = UIColor(red: 12/255, green: 67/255, blue: 46/255, alpha: 1.0)
+        let num = UserDefaults.standard.integer(forKey: "raffleNum")
+        raffleLabel.text = "Raffle No. \(num)"
+        
+        initRaffleNum()
         
         // Do any additional setup after loading the view.
+    }
+    
+    func initRaffleNum() {
+        let raffleCheck = UserDefaults.standard.integer(forKey: "raffleNum")
+        if(raffleCheck == 0) {
+            let db = Firestore.firestore()
+            db.collection("raffle").getDocuments() { (querySnapshot, err) in
+                if let err = err {
+                    print("Error getting documents: \(err)")
+                } else {
+                    var potentialRaffleNum: [Int] = []
+                    for document in querySnapshot!.documents {
+                        let data = document.data()
+                        let num = data["num"] as! Int
+                        let taken = data["taken"] as! Bool
+                        if(!taken){
+                            potentialRaffleNum.append(num)
+                        }
+                    }
+                    potentialRaffleNum.shuffle()
+                    if(potentialRaffleNum.count>0) {
+                        let raffleNum = potentialRaffleNum[0]
+                        db.collection("raffle").document("\(raffleNum)").setData([
+                            "num": raffleNum,
+                            "taken": true
+                        ])
+                        UserDefaults.standard.set(raffleNum, forKey: "raffleNum")
+                    } else { }
+                }
+                self.redrawRaffleLabel()
+            }
+        }
+    }
+    
+    func redrawRaffleLabel() {
+        let num = UserDefaults.standard.integer(forKey: "raffleNum")
+        print(num)
+        raffleLabel.text = "Raffle No. \(num)"
     }
     
 
