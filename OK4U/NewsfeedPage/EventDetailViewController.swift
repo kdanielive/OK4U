@@ -37,13 +37,14 @@ class EventDetailViewController: UIViewController, UICollectionViewDataSource, U
         // Setting the horizontal Image
         let padding = CGFloat(20)
         let event = events[eventRowId!]
+        event.collection = event.collection.sorted(by: { $0.1 < $1.1 })
         let row = indexPath.row
         
         var cellImage = UIImage()
         if(event.collection.count == 0) {
             cellImage = event.image!
         } else {
-            cellImage = event.collection[row]
+            cellImage = event.collection[row].0
         }
         let cellImageView = UIImageView()
         cellImageView.contentMode = .scaleAspectFit

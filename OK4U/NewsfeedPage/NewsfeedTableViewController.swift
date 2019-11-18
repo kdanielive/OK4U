@@ -61,7 +61,7 @@ class NewsfeedTableViewController: UITableViewController {
                     print(error)
                 } else {
                     let image = UIImage(data: data!)
-                    event.collection.append(image!)
+                    event.collection.append((image!,idx))
                     print("Success")
                 }
             })
