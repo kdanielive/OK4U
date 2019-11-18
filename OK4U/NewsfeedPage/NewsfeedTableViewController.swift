@@ -26,21 +26,21 @@ class NewsfeedTableViewController: UITableViewController {
                     let date = data["date"] as! String
                     let primary = data["primary"] as! Bool
                     let imageNav = data["imageNav"] as! String
+                    let isCollection = data["isCollection"] as! Bool
                     let event = Event(name: name, date: date, description: description, primary: primary, imageNav: imageNav, image: nil)
-                    self.downloadImage(imageName: "/Newsfeed/\(imageNav).png", event: event)
+                    self.downloadImage(imageName: "/Image/\(imageNav).png", event: event)
                     if(primary==true) {
                         primaryEvent = event
+                    }
+                    if(isCollection) {
+                        let collectionLength = data["collectionLength"] as! Int
+                        self.downloadCollection(collectionName: "/Collection/\(imageNav)", event: event, length: collectionLength)
                     }
                     events.append(event)
                 }
             }
             events = events.sorted(by: { $0.date > $1.date })
             self.tableView.reloadData()
-            
-            
-            let storage = Storage.storage()
-            let storageRef = storage.reference()
-            let imagesRef = storageRef.child("Newsfeed/sticker.jpg")
         }
         
         // Uncomment the following line to preserve selection between presentations
@@ -48,6 +48,24 @@ class NewsfeedTableViewController: UITableViewController {
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
+    }
+    
+    func downloadCollection(collectionName: String, event: Event, length: Int) {
+        let storage = Storage.storage()
+        let storageRef = storage.reference()
+        
+        for idx in 1...length {
+            let imageRef = storageRef.child("\(collectionName)/\(idx).png")
+            imageRef.getData(maxSize: 3 * 1024 * 1024, completion: { data, error in
+                if let error = error {
+                    print(error)
+                } else {
+                    let image = UIImage(data: data!)
+                    event.collection.append(image!)
+                    print("Success")
+                }
+            })
+        }
     }
     
     func downloadImage(imageName: String, event: Event) {

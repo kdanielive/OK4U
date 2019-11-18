@@ -23,7 +23,12 @@ class EventDetailViewController: UIViewController, UICollectionViewDataSource, U
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 2
+        let event = events[eventRowId!]
+        if(event.collection.count==0) {
+            return 1
+        } else {
+            return event.collection.count
+        }
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -31,8 +36,15 @@ class EventDetailViewController: UIViewController, UICollectionViewDataSource, U
         
         // Setting the horizontal Image
         let padding = CGFloat(20)
-        var cellImage = UIImage(named: eventImages[indexPath.row])
-        cellImage = events[eventRowId!].image
+        let event = events[eventRowId!]
+        let row = indexPath.row
+        
+        var cellImage = UIImage()
+        if(event.collection.count == 0) {
+            cellImage = event.image!
+        } else {
+            cellImage = event.collection[row]
+        }
         let cellImageView = UIImageView()
         cellImageView.contentMode = .scaleAspectFit
         cellImageView.image = cellImage

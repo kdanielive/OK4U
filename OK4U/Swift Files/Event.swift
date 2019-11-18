@@ -17,6 +17,7 @@ class Event {
     let primary: Bool
     let imageNav: String
     var image: UIImage?
+    var collection: [UIImage]
 
     init(name:String, date: String, description: String, primary: Bool, imageNav:String, image:UIImage?) {
         self.name = name
@@ -25,5 +26,6 @@ class Event {
         self.primary = primary
         self.imageNav = imageNav
         self.image = nil
+        self.collection = []
     }
 }
