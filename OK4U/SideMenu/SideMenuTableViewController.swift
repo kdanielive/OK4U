@@ -47,7 +47,7 @@ class SideMenuTableViewController: UITableViewController {
             title = "Credits"
             message = """
             Lead/Sole Developer: 김석준 Seouk Jun Kim (Daniel)
-            UI/UX Design: 김석준 Seouk Jun Kim (Daniel)
+            UI/UX Design: 김석준 Seouk Jun Kim (Daniel), Ji Woo Kym
             Project Design: 김석준 Seouk Jun Kim (Daniel), Ji Woo Kym, 장현화 Hyunwha Chang
             """
         }else {}
