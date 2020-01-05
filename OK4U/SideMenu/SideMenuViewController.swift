@@ -17,12 +17,13 @@ class SideMenuViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        // Used for drawing raffle label
+        /*
         raffleLabel.textColor = UIColor(red: 12/255, green: 67/255, blue: 46/255, alpha: 1.0)
         let num = UserDefaults.standard.integer(forKey: "raffleNum")
         raffleLabel.text = "Raffle No. \(num)"
-        
         initRaffleNum()
-        
+        */
         // Do any additional setup after loading the view.
     }
     
