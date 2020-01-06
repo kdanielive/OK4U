@@ -24,6 +24,7 @@
 		AB07893E2381015800E7B2C6 /* SideMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB07893D2381015800E7B2C6 /* SideMenuViewController.swift */; };
 		AB078942238102CA00E7B2C6 /* LaunchScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB078941238102CA00E7B2C6 /* LaunchScreenViewController.swift */; };
 		AB07894423810F2C00E7B2C6 /* SideMenuTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB07894323810F2C00E7B2C6 /* SideMenuTableViewController.swift */; };
+		AB4E4E1C23C3285F0099F3C5 /* NightwalkViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB4E4E1B23C3285F0099F3C5 /* NightwalkViewController.swift */; };
 		ABB60409231FF3910029AA3B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABB60408231FF3910029AA3B /* AppDelegate.swift */; };
 		ABB6040B231FF3910029AA3B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABB6040A231FF3910029AA3B /* ViewController.swift */; };
 		ABB6040E231FF3910029AA3B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ABB6040C231FF3910029AA3B /* Main.storyboard */; };
@@ -77,6 +78,7 @@
 		AB07893D2381015800E7B2C6 /* SideMenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuViewController.swift; sourceTree = "<group>"; };
 		AB078941238102CA00E7B2C6 /* LaunchScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchScreenViewController.swift; sourceTree = "<group>"; };
 		AB07894323810F2C00E7B2C6 /* SideMenuTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuTableViewController.swift; sourceTree = "<group>"; };
+		AB4E4E1B23C3285F0099F3C5 /* NightwalkViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NightwalkViewController.swift; sourceTree = "<group>"; };
 		ABB60405231FF3910029AA3B /* OK4U.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OK4U.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ABB60408231FF3910029AA3B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		ABB6040A231FF3910029AA3B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -204,6 +206,14 @@
 			path = LaunchScreen;
 			sourceTree = "<group>";
 		};
+		AB4E4E1A23C328340099F3C5 /* NightwalkPage */ = {
+			isa = PBXGroup;
+			children = (
+				AB4E4E1B23C3285F0099F3C5 /* NightwalkViewController.swift */,
+			);
+			path = NightwalkPage;
+			sourceTree = "<group>";
+		};
 		ABB603FC231FF3910029AA3B = {
 			isa = PBXGroup;
 			children = (
@@ -232,6 +242,7 @@
 				AB07893F238102B400E7B2C6 /* LaunchScreen */,
 				AB03BE50234689180018BE14 /* Swift Files */,
 				AB07893C2381014500E7B2C6 /* SideMenu */,
+				AB4E4E1A23C328340099F3C5 /* NightwalkPage */,
 				AB03BE4B23448D0A0018BE14 /* NewsfeedPage */,
 				AB03BE46234418C00018BE14 /* OKIntroPage */,
 				AB03BE43234416D50018BE14 /* SettingsPage */,
@@ -561,6 +572,7 @@
 				ABB6040B231FF3910029AA3B /* ViewController.swift in Sources */,
 				AB03BE45234416E40018BE14 /* SettingsViewController.swift in Sources */,
 				AB078939237D27BB00E7B2C6 /* EventDetailViewController.swift in Sources */,
+				AB4E4E1C23C3285F0099F3C5 /* NightwalkViewController.swift in Sources */,
 				ABB60409231FF3910029AA3B /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

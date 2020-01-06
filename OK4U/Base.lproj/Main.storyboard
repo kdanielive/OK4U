@@ -580,10 +580,10 @@
             </objects>
             <point key="canvasLocation" x="5066.666666666667" y="490.84821428571428"/>
         </scene>
-        <!--View Controller-->
+        <!--Nightwalk View Controller-->
         <scene sceneID="zNQ-Uz-bTk">
             <objects>
-                <viewController storyboardIdentifier="nightwalk" id="BRx-C3-9fz" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="nightwalk" id="BRx-C3-9fz" customClass="NightwalkViewController" customModule="OK4U" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="7i5-QO-Gao">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
