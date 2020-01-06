@@ -587,7 +587,21 @@
                     <view key="view" contentMode="scaleToFill" id="7i5-QO-Gao">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bCN-tT-3nV">
+                                <rect key="frame" x="0.0" y="88" width="414" height="414"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="bCN-tT-3nV" secondAttribute="height" multiplier="1:1" id="5HU-ez-bNO"/>
+                                </constraints>
+                            </view>
+                        </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="bCN-tT-3nV" firstAttribute="top" secondItem="cov-v7-HNl" secondAttribute="top" id="f2g-ob-2yU"/>
+                            <constraint firstItem="bCN-tT-3nV" firstAttribute="leading" secondItem="cov-v7-HNl" secondAttribute="leading" id="ogM-5i-Ll7"/>
+                            <constraint firstItem="cov-v7-HNl" firstAttribute="trailing" secondItem="bCN-tT-3nV" secondAttribute="trailing" id="uxN-RR-PV1"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="cov-v7-HNl"/>
                     </view>
                     <navigationItem key="navigationItem" id="YPb-O7-cJU">
@@ -604,7 +618,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="w1p-Ly-iwA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="6654" y="398"/>
+            <point key="canvasLocation" x="6653.6231884057979" y="397.76785714285711"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="EjE-KY-r1B">
