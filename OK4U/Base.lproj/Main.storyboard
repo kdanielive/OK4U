@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14868" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="3bI-3Q-8ot">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="3bI-3Q-8ot">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14824"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -285,7 +285,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zAE-WG-tpc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3461" y="1093"/>
+            <point key="canvasLocation" x="3461" y="1718"/>
         </scene>
         <!--OK4U with EstherFormula-->
         <scene sceneID="iTG-SD-Vad">
@@ -309,7 +309,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SXy-Ka-3Ok" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5184.057971014493" y="1092.8571428571429"/>
+            <point key="canvasLocation" x="5065" y="1718"/>
         </scene>
         <!--Newsfeed Table View Controller-->
         <scene sceneID="QBx-SI-KoR">
@@ -457,8 +457,30 @@
                         <sections>
                             <tableViewSection id="S7p-rg-tRf">
                                 <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="IPR-dN-I59">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="IPR-dN-I59" id="FFB-Lr-VLI">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="OKNightWalk" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WGM-S6-WXQ">
+                                                    <rect key="frame" x="10" y="10" width="394" height="24"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" red="0.1500616189" green="0.32131397719999999" blue="0.21565667229999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="WGM-S6-WXQ" firstAttribute="top" secondItem="FFB-Lr-VLI" secondAttribute="top" constant="10" id="DAC-6j-nEK"/>
+                                                <constraint firstAttribute="trailing" secondItem="WGM-S6-WXQ" secondAttribute="trailing" constant="10" id="GmW-cq-LVT"/>
+                                                <constraint firstAttribute="bottom" secondItem="WGM-S6-WXQ" secondAttribute="bottom" constant="10" id="ONy-Vq-zHE"/>
+                                                <constraint firstItem="WGM-S6-WXQ" firstAttribute="leading" secondItem="FFB-Lr-VLI" secondAttribute="leading" constant="10" id="dCo-at-qcV"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="5Fe-o3-qSx">
-                                        <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>
+                                        <rect key="frame" x="0.0" y="72" width="414" height="43.5"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="5Fe-o3-qSx" id="p4I-9R-hPW">
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
@@ -480,7 +502,7 @@
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="lIt-7h-C8f">
-                                        <rect key="frame" x="0.0" y="71.5" width="414" height="43.5"/>
+                                        <rect key="frame" x="0.0" y="115.5" width="414" height="43.5"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="lIt-7h-C8f" id="rvl-Lm-zU7">
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
@@ -502,7 +524,7 @@
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="aCC-JH-qrB">
-                                        <rect key="frame" x="0.0" y="115" width="414" height="43.5"/>
+                                        <rect key="frame" x="0.0" y="159" width="414" height="43.5"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="aCC-JH-qrB" id="GtJ-zh-Pgq">
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
@@ -536,6 +558,21 @@
             </objects>
             <point key="canvasLocation" x="5066.666666666667" y="490.84821428571428"/>
         </scene>
+        <!--View Controller-->
+        <scene sceneID="UY4-it-W8n">
+            <objects>
+                <viewController id="kbO-Q3-Ngw" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="lbu-ub-XE8">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="er6-bB-WYP"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="KDO-uc-V7t" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5938" y="398"/>
+        </scene>
         <!--Navigation Controller-->
         <scene sceneID="EjE-KY-r1B">
             <objects>
@@ -558,7 +595,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LIb-nw-bf6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <exit id="2g6-jf-Tqz" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="4235" y="1093"/>
+            <point key="canvasLocation" x="4235" y="1718"/>
         </scene>
         <!--뉴스피드-->
         <scene sceneID="Z7y-lZ-N0V">
@@ -607,7 +644,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9JL-Nq-spN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2576.811594202899" y="1092.8571428571429"/>
+            <point key="canvasLocation" x="2577" y="1718"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="cAZ-ol-eTl">
@@ -654,7 +691,7 @@
         <image name="OKLogo" width="1248" height="243"/>
         <image name="arrow.turn.down.left" catalog="system" width="64" height="48"/>
         <image name="barOKLogo" width="400" height="400"/>
-        <image name="list.dash" catalog="system" width="64" height="44"/>
+        <image name="list.dash" catalog="system" width="64" height="42"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="bhH-gt-BH0"/>

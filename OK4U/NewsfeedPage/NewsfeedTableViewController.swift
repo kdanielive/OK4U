@@ -14,6 +14,8 @@ class NewsfeedTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        
+        
         let db = Firestore.firestore()
         db.collection("events").getDocuments() { (querySnapshot, err) in
             if let err = err {
