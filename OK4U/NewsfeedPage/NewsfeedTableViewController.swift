@@ -36,6 +36,7 @@ class NewsfeedTableViewController: UITableViewController {
                         let collectionLength = data["collectionLength"] as! Int
                         self.downloadCollection(collectionName: "/Collection/\(imageNav)", event: event, length: collectionLength)
                     }
+                    self.downloadDescription(textName: "/Text/\(imageNav).txt", event: event)
                     events.append(event)
                 }
             }
@@ -48,6 +49,23 @@ class NewsfeedTableViewController: UITableViewController {
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
+    }
+    
+    func downloadDescription(textName: String, event: Event) {
+        let storage = Storage.storage()
+        let storageRef = storage.reference()
+        let textRef = storageRef.child("\(textName)")
+        
+        textRef.getData(maxSize: 3 * 1024 * 1024, completion: { data, error in
+            if let error = error {
+                print(error)
+            } else {
+                let description = String(data: data!, encoding: .utf8)!
+                event.description = description
+                print("text success")
+                print(description)
+            }
+        })
     }
     
     func downloadCollection(collectionName: String, event: Event, length: Int) {

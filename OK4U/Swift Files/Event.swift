@@ -13,7 +13,7 @@ class Event {
     
     let name: String
     let date: String
-    let description: String
+    var description: String
     let primary: Bool
     let imageNav: String
     var image: UIImage?
