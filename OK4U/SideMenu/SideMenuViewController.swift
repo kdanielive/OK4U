@@ -27,6 +27,7 @@ class SideMenuViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
+    /*
     func initRaffleNum() {
         let raffleCheck = UserDefaults.standard.integer(forKey: "raffleNum")
         if(raffleCheck == 0) {
@@ -64,7 +65,7 @@ class SideMenuViewController: UIViewController {
         print(num)
         raffleLabel.text = "Raffle No. \(num)"
     }
-    
+    */
 
     /*
     // MARK: - Navigation

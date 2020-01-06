@@ -13,19 +13,19 @@ class Event {
     
     let name: String
     let date: String
-    var description: String
+    var description: String?
     let primary: Bool
     let imageNav: String
     var image: UIImage?
     var collection: [(UIImage, Int)]
 
-    init(name:String, date: String, description: String, primary: Bool, imageNav:String, image:UIImage?) {
+    init(name:String, date: String, description: String?, primary: Bool, imageNav:String, image:UIImage?) {
         self.name = name
         self.description = description
         self.date = date
         self.primary = primary
         self.imageNav = imageNav
-        self.image = nil
+        self.image = image
         self.collection = []
     }
 }

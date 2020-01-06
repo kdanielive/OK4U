@@ -22,12 +22,11 @@ class NewsfeedTableViewController: UITableViewController {
                 for document in querySnapshot!.documents {
                     let data = document.data()
                     let name = data["name"] as! String
-                    let description = data["description"] as! String
                     let date = data["date"] as! String
                     let primary = data["primary"] as! Bool
                     let imageNav = data["imageNav"] as! String
                     let isCollection = data["isCollection"] as! Bool
-                    let event = Event(name: name, date: date, description: description, primary: primary, imageNav: imageNav, image: nil)
+                    let event = Event(name: name, date: date, description: nil, primary: primary, imageNav: imageNav, image: nil)
                     self.downloadImage(imageName: "/Image/\(imageNav).png", event: event)
                     if(primary==true) {
                         primaryEvent = event
@@ -62,8 +61,6 @@ class NewsfeedTableViewController: UITableViewController {
             } else {
                 let description = String(data: data!, encoding: .utf8)!
                 event.description = description
-                print("text success")
-                print(description)
             }
         })
     }
@@ -142,6 +139,9 @@ class NewsfeedTableViewController: UITableViewController {
             var backgroundImage = UIImage(named: "newscardtestimage")!
             if(primaryEvent?.image != nil) {
                 backgroundImage = primaryEvent!.image!
+                cell.isUserInteractionEnabled = true
+            } else {
+                cell.isUserInteractionEnabled = false
             }
             cell.backgroundImageView = UIImageView(image: backgroundImage)
             
@@ -190,6 +190,9 @@ class NewsfeedTableViewController: UITableViewController {
             var backgroundImage = UIImage(named: "ok20191")!
             if(events[row].image != nil) {
                 backgroundImage = events[row].image!
+                cell.isUserInteractionEnabled = true
+            } else {
+                cell.isUserInteractionEnabled = false
             }
             cell.backgroundImageView = UIImageView()
             cell.backgroundImageView.contentMode = .scaleAspectFill
