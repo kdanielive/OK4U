@@ -24,8 +24,19 @@ class SideMenuTableViewController: UITableViewController {
         let row = indexPath.row
         var title = ""
         var message = ""
-        
-        if(row==0) {
+        var showAlert = true
+        if(row==0){
+            showAlert = false
+            let mainVC = self.storyboard?.instantiateViewController(withIdentifier: "mainnavigation") as! UINavigationController
+            self.navigationController?.pushViewController(mainVC.viewControllers.first!, animated: true)
+            loadEvents = false
+        }
+        else if(row==1) {
+            showAlert = false
+            let nightwalkVC = self.storyboard?.instantiateViewController(withIdentifier: "nightwalknavigation") as! UINavigationController
+            self.navigationController?.pushViewController(nightwalkVC.viewControllers.first!, animated: true)
+            //navigationController?.pushViewController(vc!, animated: true)
+        } else if(row==2) {
             title = "About EstherFormula"
             message = """
             2017년 부터 오케이를 지원 해주신 에스더포뮬러는 오케이와 함께 컬럼비아 학생들의 신체적/정신적 건강의 증진을 꿈꿔 왔습니다.
@@ -34,7 +45,7 @@ class SideMenuTableViewController: UITableViewController {
             
             오케이가 이렇게 성장할 수 있게 도와주시고, 또 컬럼비아 한인 학생들이 더 건강하게 학창 생활을 이어 나가게 해주신 에스더포뮬러에 언제나 무한한 감사를 표합니다.
             """
-        } else if(row==1) {
+        } else if(row==3) {
             title = "About OK4WellBeing"
             message = """
             2016년 11월에 설립 된 오케이는 문화, 학업, 취업 등을 목표로 하는 타 한인 학생회와는 다르게 한인 학생들의 신체적/정신적 건강의 증진을 목표로 설립 되었습니다.
@@ -43,7 +54,7 @@ class SideMenuTableViewController: UITableViewController {
             
             삶이 힘드시고 지치실 때 오케이를 잊지 마시고 저희의 다음 이벤트를 기다려 주세요!!
             """
-        } else if(row==2) {
+        } else if(row==4) {
             title = "Credits"
             message = """
             Lead/Sole Developer: 김석준 Seouk Jun Kim (Daniel)
@@ -52,9 +63,11 @@ class SideMenuTableViewController: UITableViewController {
             """
         }else {}
         
-        let alert = UIAlertController(title: title, message: message, preferredStyle: UIAlertController.Style.alert)
-        alert.addAction(UIAlertAction(title: "옼케이~", style: .default, handler: nil))
-        self.navigationController?.present(alert, animated: false, completion: nil)
+        if(showAlert){
+            let alert = UIAlertController(title: title, message: message, preferredStyle: UIAlertController.Style.alert)
+            alert.addAction(UIAlertAction(title: "옼케이~", style: .default, handler: nil))
+            self.navigationController?.present(alert, animated: false, completion: nil)
+        }
     }
     // MARK: - Table view data source
     /*

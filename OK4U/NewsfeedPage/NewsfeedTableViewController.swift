@@ -14,35 +14,35 @@ class NewsfeedTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        
-        
-        let db = Firestore.firestore()
-        db.collection("events").getDocuments() { (querySnapshot, err) in
-            if let err = err {
-                print("Error getting documents: \(err)")
-            } else {
-                for document in querySnapshot!.documents {
-                    let data = document.data()
-                    let name = data["name"] as! String
-                    let date = data["date"] as! String
-                    let primary = data["primary"] as! Bool
-                    let imageNav = data["imageNav"] as! String
-                    let isCollection = data["isCollection"] as! Bool
-                    let event = Event(name: name, date: date, description: nil, primary: primary, imageNav: imageNav, image: nil)
-                    self.downloadImage(imageName: "/Image/\(imageNav).png", event: event)
-                    if(primary==true) {
-                        primaryEvent = event
+        if(loadEvents){
+            let db = Firestore.firestore()
+            db.collection("events").getDocuments() { (querySnapshot, err) in
+                if let err = err {
+                    print("Error getting documents: \(err)")
+                } else {
+                    for document in querySnapshot!.documents {
+                        let data = document.data()
+                        let name = data["name"] as! String
+                        let date = data["date"] as! String
+                        let primary = data["primary"] as! Bool
+                        let imageNav = data["imageNav"] as! String
+                        let isCollection = data["isCollection"] as! Bool
+                        let event = Event(name: name, date: date, description: nil, primary: primary, imageNav: imageNav, image: nil)
+                        self.downloadImage(imageName: "/Image/\(imageNav).png", event: event)
+                        if(primary==true) {
+                            primaryEvent = event
+                        }
+                        if(isCollection) {
+                            let collectionLength = data["collectionLength"] as! Int
+                            self.downloadCollection(collectionName: "/Collection/\(imageNav)", event: event, length: collectionLength)
+                        }
+                        self.downloadDescription(textName: "/Text/\(imageNav).txt", event: event)
+                        events.append(event)
                     }
-                    if(isCollection) {
-                        let collectionLength = data["collectionLength"] as! Int
-                        self.downloadCollection(collectionName: "/Collection/\(imageNav)", event: event, length: collectionLength)
-                    }
-                    self.downloadDescription(textName: "/Text/\(imageNav).txt", event: event)
-                    events.append(event)
                 }
+                events = events.sorted(by: { $0.date > $1.date })
+                self.tableView.reloadData()
             }
-            events = events.sorted(by: { $0.date > $1.date })
-            self.tableView.reloadData()
         }
         
         // Uncomment the following line to preserve selection between presentations

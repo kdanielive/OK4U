@@ -29,3 +29,5 @@ var events = [Event]()
 var primaryEvent:Event?
 
 var eventRowId:Int?
+
+var loadEvents = true
