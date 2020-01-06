@@ -14,7 +14,7 @@ target 'OK4U' do
   pod 'Firebase/Firestore'
   pod 'Firebase/Core'
   pod 'Firebase/Storage'
-
+  pod 'Mapbox-iOS-SDK', '~> 5.6'
   target 'OK4UTests' do
     inherit! :search_paths
     # Pods for testing
