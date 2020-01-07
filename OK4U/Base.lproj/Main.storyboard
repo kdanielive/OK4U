@@ -618,10 +618,21 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="navigationFrame" destination="bCN-tT-3nV" id="scH-TB-EPb"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="w1p-Ly-iwA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="6653.6231884057979" y="397.76785714285711"/>
+        </scene>
+        <!--Navigation-->
+        <scene sceneID="96B-O0-dbh">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Navigation" bundleIdentifier="org.cocoapods.MapboxNavigation" id="q1m-JT-t4n" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="e4d-eI-fxc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="7193" y="305"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="EjE-KY-r1B">
