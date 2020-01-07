@@ -595,7 +595,7 @@
                                     <constraint firstAttribute="width" secondItem="bCN-tT-3nV" secondAttribute="height" multiplier="1:1" id="5HU-ez-bNO"/>
                                 </constraints>
                                 <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="string" keyPath="styleURL__" value="mapbox://styles/mapbox/streets-v11"/>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="styleURL__" value="mapbox://styles/mapbox/navigation-guidance-day-v4"/>
                                 </userDefinedRuntimeAttributes>
                             </view>
                         </subviews>
