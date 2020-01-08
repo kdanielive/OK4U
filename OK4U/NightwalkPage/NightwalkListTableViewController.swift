@@ -46,6 +46,10 @@ class NightwalkListTableViewController: UITableViewController {
         // #warning Incomplete implementation, return the number of sections
         return 1
     }
+    
+    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 50
+    }
 
     /*
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
