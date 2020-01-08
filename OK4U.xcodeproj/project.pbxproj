@@ -37,6 +37,7 @@
 		ABB6043D232193CB0029AA3B /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABB6043C232193CB0029AA3B /* LoginViewController.swift */; };
 		ABB6043E2322BB540029AA3B /* OK4U.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = ABB6040F231FF3910029AA3B /* OK4U.xcdatamodeld */; };
 		ABB6043F2322BB550029AA3B /* OK4U.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = ABB6040F231FF3910029AA3B /* OK4U.xcdatamodeld */; };
+		ABD74A8423C45FE3001117B1 /* NightwalkListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABD74A8323C45FE3001117B1 /* NightwalkListTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -95,6 +96,7 @@
 		ABB6042D231FF3930029AA3B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		ABB60439232191210029AA3B /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		ABB6043C232193CB0029AA3B /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		ABD74A8323C45FE3001117B1 /* NightwalkListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NightwalkListTableViewController.swift; sourceTree = "<group>"; };
 		AEB05D00A4429CDF85FC96D8 /* Pods-OK4UUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OK4UUITests.debug.xcconfig"; path = "Target Support Files/Pods-OK4UUITests/Pods-OK4UUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		EB8319C074D6E3F4E9A5494D /* Pods-OK4U.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OK4U.release.xcconfig"; path = "Target Support Files/Pods-OK4U/Pods-OK4U.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -210,6 +212,7 @@
 			isa = PBXGroup;
 			children = (
 				AB4E4E1B23C3285F0099F3C5 /* NightwalkViewController.swift */,
+				ABD74A8323C45FE3001117B1 /* NightwalkListTableViewController.swift */,
 			);
 			path = NightwalkPage;
 			sourceTree = "<group>";
@@ -588,6 +591,7 @@
 				AB078936237CF1B600E7B2C6 /* Globals.swift in Sources */,
 				AB03BE48234418F60018BE14 /* OKIntroTableViewController.swift in Sources */,
 				AB03BE4A234419130018BE14 /* OKIntroTableViewCell.swift in Sources */,
+				ABD74A8423C45FE3001117B1 /* NightwalkListTableViewController.swift in Sources */,
 				AB03BE52234689280018BE14 /* Event.swift in Sources */,
 				AB078932237CC5C500E7B2C6 /* NewsfeedTableViewCell.swift in Sources */,
 				AB03BE4F23467A740018BE14 /* OKIntroDetailTableViewCell.swift in Sources */,
