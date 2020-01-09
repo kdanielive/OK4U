@@ -57,6 +57,19 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		AB6608E623C6601000A9E263 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		08DBBDA36281FF159958BE34 /* Pods_OK4UUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OK4UUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		0DEC38755B5DCC587CD113ED /* Pods-OK4U.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OK4U.debug.xcconfig"; path = "Target Support Files/Pods-OK4U/Pods-OK4U.debug.xcconfig"; sourceTree = "<group>"; };
@@ -81,6 +94,7 @@
 		AB07894323810F2C00E7B2C6 /* SideMenuTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuTableViewController.swift; sourceTree = "<group>"; };
 		AB4E4E1B23C3285F0099F3C5 /* NightwalkViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NightwalkViewController.swift; sourceTree = "<group>"; };
 		AB66088323C61E3C00A9E263 /* OK4U.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = OK4U.entitlements; sourceTree = "<group>"; };
+		AB6608EF23C6603900A9E263 /* IntentsUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IntentsUI.framework; path = System/Library/Frameworks/IntentsUI.framework; sourceTree = SDKROOT; };
 		ABB60405231FF3910029AA3B /* OK4U.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OK4U.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ABB60408231FF3910029AA3B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		ABB6040A231FF3910029AA3B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -136,6 +150,7 @@
 				AA227FCCCB2233FA1807BE40 /* Pods_OK4U.framework */,
 				106D9C761F1B1AAB0242D350 /* Pods_OK4UTests.framework */,
 				08DBBDA36281FF159958BE34 /* Pods_OK4UUITests.framework */,
+				AB6608EF23C6603900A9E263 /* IntentsUI.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -303,6 +318,7 @@
 				ABB60403231FF3910029AA3B /* Resources */,
 				C716CCCBCB8CFA785ECBEF39 /* [CP] Embed Pods Frameworks */,
 				4CF017B57683EA09758BE27F /* [CP] Copy Pods Resources */,
+				AB6608E623C6601000A9E263 /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
@@ -357,7 +373,7 @@
 		ABB603FD231FF3910029AA3B /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 1030;
+				LastSwiftUpdateCheck = 1120;
 				LastUpgradeCheck = 1030;
 				ORGANIZATIONNAME = "Daniel Kim";
 				TargetAttributes = {
