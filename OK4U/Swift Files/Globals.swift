@@ -31,3 +31,7 @@ var primaryEvent:Event?
 var eventRowId:Int?
 
 var loadEvents = true
+
+let buildingsDict = {
+    "Alpha Chi Omega (536 West 114th Street)":
+}
