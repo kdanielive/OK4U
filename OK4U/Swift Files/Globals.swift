@@ -32,6 +32,16 @@ var eventRowId:Int?
 
 var loadEvents = true
 
-let buildingsDict = {
-    "Alpha Chi Omega (536 West 114th Street)":
-}
+let buildingsDict = [
+    "Alpha Chi Omega (536 West 114th Street)" : (40.806081,-73.963707),
+    "Alpha Delta Phi (526 West 114th Street)" : (40.805961,-73.963391),
+    "Alpha Epsilon Pi (546 West 113th Street)" : (40.806221,-73.964024),
+    "Armstrong Hall": (40.805370,-73.965300),
+    "Avery Hall": (40.808246,-73.960949),
+    "Baker Field Athletic Complex": (40.872280,-73.916790),
+    "Broadway Residence Hall": (40.806165, -73.964886),
+    "Buell Hall": (40.807668, -73.961421),
+    "Butler Library": (40.806180, -73.963330),
+    
+    
+]

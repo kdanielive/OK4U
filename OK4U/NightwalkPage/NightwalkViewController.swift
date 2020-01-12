@@ -46,6 +46,7 @@ class NightwalkViewController: UIViewController, MGLMapViewDelegate {
         // Converts point where user did a long press to map coordinates
         let point = sender.location(in: mapView)
         let coordinate = mapView.convert(point, toCoordinateFrom: mapView)
+        print(coordinate)
 
         // Create a basic point annotation and add it to the map
         let annotation = MGLPointAnnotation()
