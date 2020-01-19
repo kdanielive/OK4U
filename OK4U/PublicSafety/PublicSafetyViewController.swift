@@ -22,13 +22,13 @@ class PublicSafetyViewController: UIViewController {
         callImage.addGestureRecognizer(tapGestureRecognizer)
 
         addContactButton.layer.borderWidth = 1
+        addContactButton.layer.borderColor = UIColor.systemGray.cgColor
         // Do any additional setup after loading the view.
     }
     
     @objc func imageTapped(tapGestureRecognizer: UITapGestureRecognizer)
     {
-        dialNumber(number: "01039510870")
-        //dialNumber(number: "+12128545555")
+        dialNumber(number: "+12128545555")
         
         let tappedImage = tapGestureRecognizer.view as! UIImageView
         tappedImage.alpha = 0.5
@@ -54,7 +54,7 @@ class PublicSafetyViewController: UIViewController {
             let contact = CNMutableContact()
             contact.familyName = ""
             contact.givenName = "Emergency"
-            contact.phoneNumbers = [CNLabeledValue(label: CNLabelHome, value: CNPhoneNumber(stringValue: "0100000000"))]
+            contact.phoneNumbers = [CNLabeledValue(label: CNLabelHome, value: CNPhoneNumber(stringValue: "+12128545555"))]
             /*// Address
             let address = CNMutablePostalAddress()
             address.street = "Your Street"
@@ -69,6 +69,10 @@ class PublicSafetyViewController: UIViewController {
             let saveRequest = CNSaveRequest()
             saveRequest.add(contact, toContainerWithIdentifier: nil)
             try? store.execute(saveRequest)
+        } else {
+            let alert = UIAlertController(title: "Already Added Public Safety Emergency Contact", message: "", preferredStyle: UIAlertController.Style.alert)
+            alert.addAction(UIAlertAction(title: "옼케이~", style: .default, handler: nil))
+            self.navigationController?.present(alert, animated: false, completion: nil)
         }
     }
     

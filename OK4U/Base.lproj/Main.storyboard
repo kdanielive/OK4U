@@ -619,7 +619,7 @@
                                 </constraints>
                                 <string key="text">When in danger, either press the call button below, or tell Siri "Call Emergency" after adding the contact through the button below.</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.42620933220000001" green="0.55233304790000004" blue="0.42449700340000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <color key="textColor" systemColor="opaqueSeparatorColor" red="0.77647058820000003" green="0.77647058820000003" blue="0.7843137255" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wso-Ti-MDb">
@@ -628,7 +628,7 @@
                                     <constraint firstAttribute="height" constant="50" id="2Da-2X-OLu"/>
                                 </constraints>
                                 <state key="normal" title="Add Public Safety Emergency #">
-                                    <color key="titleColor" red="0.1500616189" green="0.32131397719999999" blue="0.21565667229999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                    <color key="titleColor" systemColor="opaqueSeparatorColor" red="0.77647058820000003" green="0.77647058820000003" blue="0.7843137255" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
                                     <action selector="pressedAddContact:" destination="gQW-gI-EjZ" eventType="touchUpInside" id="9lm-4R-uvy"/>
