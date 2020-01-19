@@ -13,19 +13,26 @@ class PublicSafetyViewController: UIViewController {
 
     @IBOutlet var callImage: UIImageView!
     @IBOutlet var addContactButton: UIButton!
+    @IBOutlet var powerSaveButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+                
         let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(imageTapped(tapGestureRecognizer:)))
         callImage.isUserInteractionEnabled = true
         callImage.addGestureRecognizer(tapGestureRecognizer)
 
         addContactButton.layer.borderWidth = 1
         addContactButton.layer.borderColor = UIColor.systemGray.cgColor
+        powerSaveButton.layer.borderWidth = 1
+        powerSaveButton.layer.borderColor = UIColor.systemGray.cgColor
         // Do any additional setup after loading the view.
     }
-    
+        
+    @IBAction func unwindToPublicSafety(segue:UIStoryboardSegue) {
+        self.navigationController?.isNavigationBarHidden = false
+    }
+
     @objc func imageTapped(tapGestureRecognizer: UITapGestureRecognizer)
     {
         dialNumber(number: "+12128545555")

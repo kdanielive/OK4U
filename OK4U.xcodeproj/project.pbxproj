@@ -25,6 +25,7 @@
 		AB078942238102CA00E7B2C6 /* LaunchScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB078941238102CA00E7B2C6 /* LaunchScreenViewController.swift */; };
 		AB07894423810F2C00E7B2C6 /* SideMenuTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB07894323810F2C00E7B2C6 /* SideMenuTableViewController.swift */; };
 		AB4CD48A23D4C3A60000A5D0 /* PublicSafetyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB4CD48923D4C3A60000A5D0 /* PublicSafetyViewController.swift */; };
+		AB4CD48C23D4D8070000A5D0 /* PowerSaveViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB4CD48B23D4D8070000A5D0 /* PowerSaveViewController.swift */; };
 		AB4E4E1C23C3285F0099F3C5 /* NightwalkViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB4E4E1B23C3285F0099F3C5 /* NightwalkViewController.swift */; };
 		ABB60409231FF3910029AA3B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABB60408231FF3910029AA3B /* AppDelegate.swift */; };
 		ABB6040B231FF3910029AA3B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABB6040A231FF3910029AA3B /* ViewController.swift */; };
@@ -94,6 +95,7 @@
 		AB078941238102CA00E7B2C6 /* LaunchScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchScreenViewController.swift; sourceTree = "<group>"; };
 		AB07894323810F2C00E7B2C6 /* SideMenuTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuTableViewController.swift; sourceTree = "<group>"; };
 		AB4CD48923D4C3A60000A5D0 /* PublicSafetyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PublicSafetyViewController.swift; sourceTree = "<group>"; };
+		AB4CD48B23D4D8070000A5D0 /* PowerSaveViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PowerSaveViewController.swift; sourceTree = "<group>"; };
 		AB4E4E1B23C3285F0099F3C5 /* NightwalkViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NightwalkViewController.swift; sourceTree = "<group>"; };
 		AB66088323C61E3C00A9E263 /* OK4U.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = OK4U.entitlements; sourceTree = "<group>"; };
 		AB6608EF23C6603900A9E263 /* IntentsUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IntentsUI.framework; path = System/Library/Frameworks/IntentsUI.framework; sourceTree = SDKROOT; };
@@ -230,6 +232,7 @@
 			isa = PBXGroup;
 			children = (
 				AB4CD48923D4C3A60000A5D0 /* PublicSafetyViewController.swift */,
+				AB4CD48B23D4D8070000A5D0 /* PowerSaveViewController.swift */,
 			);
 			path = PublicSafety;
 			sourceTree = "<group>";
@@ -618,6 +621,7 @@
 				ABB60411231FF3910029AA3B /* OK4U.xcdatamodeld in Sources */,
 				AB078942238102CA00E7B2C6 /* LaunchScreenViewController.swift in Sources */,
 				AB07893B237D289500E7B2C6 /* EventDetailCollectionViewCell.swift in Sources */,
+				AB4CD48C23D4D8070000A5D0 /* PowerSaveViewController.swift in Sources */,
 				AB078936237CF1B600E7B2C6 /* Globals.swift in Sources */,
 				AB03BE48234418F60018BE14 /* OKIntroTableViewController.swift in Sources */,
 				AB03BE4A234419130018BE14 /* OKIntroTableViewCell.swift in Sources */,
