@@ -28,11 +28,13 @@
 		</dict>
 	</array>
 	<key>CFBundleVersion</key>
-	<string>1</string>
+	<string>$(CURRENT_PROJECT_VERSION)</string>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
 	<key>MGLMapboxAccessToken</key>
 	<string>pk.eyJ1Ijoic3VranVuMTIyOSIsImEiOiJjazUyODN2Mjgwa3FsM2xwbW4xbzRrdnNxIn0.U_a8VdzXV-AhVjauqq5Jig</string>
+	<key>NSContactsUsageDescription</key>
+	<string>Adds Public Safety Emergency Number</string>
 	<key>NSLocationWhenInUseUsageDescription</key>
 	<string>Shows your location on the map and helps improve the map.</string>
 	<key>NSUserActivityTypes</key>
@@ -64,7 +66,5 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
-	<key>NSContactsUsageDescription</key>
-	<string>Adds Public Safety Emergency Number</string>
 </dict>
 </plist>
