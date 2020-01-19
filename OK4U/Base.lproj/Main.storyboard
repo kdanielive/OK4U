@@ -580,6 +580,49 @@
             </objects>
             <point key="canvasLocation" x="5066.666666666667" y="490.84821428571428"/>
         </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="19N-8z-auT">
+            <objects>
+                <navigationController storyboardIdentifier="publicsafety" id="e5S-fK-zHr" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="9J1-2f-O6X">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="0.1500616189" green="0.32131397719999999" blue="0.21565667229999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="gQW-gI-EjZ" kind="relationship" relationship="rootViewController" id="Z8J-sf-Q9Q"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="MOk-tx-mvM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5826" y="398"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="1HG-ug-uQh">
+            <objects>
+                <viewController id="gQW-gI-EjZ" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="f1e-cN-OqQ">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="DFF-iO-0lS"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="k8f-LQ-OGC">
+                        <barButtonItem key="leftBarButtonItem" title="Item" image="OKLogo" id="yGw-GP-J9C">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="Item" image="list.dash" catalog="system" id="bw4-Sv-NzK">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <connections>
+                                <segue destination="YG2-iK-qMm" kind="presentation" id="BKK-Rg-T6f"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zkU-KT-cqE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="6639" y="398"/>
+        </scene>
         <!--Nightwalk View Controller-->
         <scene sceneID="zNQ-Uz-bTk">
             <objects>
@@ -623,9 +666,6 @@
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" title="Item" image="list.dash" catalog="system" id="EFz-aa-1XO">
                             <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                            <connections>
-                                <segue destination="YG2-iK-qMm" kind="presentation" id="d9o-gh-3dl"/>
-                            </connections>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
@@ -634,7 +674,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="w1p-Ly-iwA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="6653.6231884057979" y="397.76785714285711"/>
+            <point key="canvasLocation" x="7226" y="1718"/>
         </scene>
         <!--Nightwalk List Table View Controller-->
         <scene sceneID="uBu-jJ-weE">
@@ -710,7 +750,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="U0A-bN-5Uj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="7429" y="556"/>
+            <point key="canvasLocation" x="8168" y="1538"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="EjE-KY-r1B">
@@ -842,7 +882,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Uvc-Zu-X8g" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5878" y="398"/>
+            <point key="canvasLocation" x="6349" y="1718"/>
         </scene>
     </scenes>
     <resources>
@@ -852,7 +892,7 @@
         <image name="list.dash" catalog="system" width="64" height="42"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="d9o-gh-3dl"/>
+        <segue reference="BKK-Rg-T6f"/>
         <segue reference="bhH-gt-BH0"/>
     </inferredMetricsTieBreakers>
 </document>

@@ -33,8 +33,8 @@ class SideMenuTableViewController: UITableViewController {
         }
         else if(row==1) {
             showAlert = false
-            let nightwalkVC = self.storyboard?.instantiateViewController(withIdentifier: "nightwalknavigation") as! UINavigationController
-            self.navigationController?.pushViewController(nightwalkVC.viewControllers.first!, animated: true)
+            let psVC = self.storyboard?.instantiateViewController(withIdentifier: "publicsafety") as! UINavigationController
+            self.navigationController?.pushViewController(psVC.viewControllers.first!, animated: true)
             //navigationController?.pushViewController(vc!, animated: true)
         } else if(row==2) {
             title = "About EstherFormula"
@@ -60,6 +60,7 @@ class SideMenuTableViewController: UITableViewController {
             Lead/Sole Developer: 김석준 Seouk Jun Kim (Daniel)
             UI/UX Design: 김석준 Seouk Jun Kim (Daniel), Ji Woo Kym
             Project Design: 김석준 Seouk Jun Kim (Daniel), Ji Woo Kym, 장현화 Hyunwha Chang
+            Phone icon icon by Icons8
             """
         }else {}
         
