@@ -597,10 +597,10 @@
             </objects>
             <point key="canvasLocation" x="5826" y="398"/>
         </scene>
-        <!--View Controller-->
+        <!--Public Safety View Controller-->
         <scene sceneID="1HG-ug-uQh">
             <objects>
-                <viewController id="gQW-gI-EjZ" sceneMemberID="viewController">
+                <viewController id="gQW-gI-EjZ" customClass="PublicSafetyViewController" customModule="OK4U" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="f1e-cN-OqQ">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -630,6 +630,9 @@
                                 <state key="normal" title="Add Public Safety Contact">
                                     <color key="titleColor" red="0.1500616189" green="0.32131397719999999" blue="0.21565667229999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 </state>
+                                <connections>
+                                    <action selector="pressedAddContact:" destination="gQW-gI-EjZ" eventType="touchUpInside" id="9lm-4R-uvy"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
@@ -656,6 +659,9 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="callImage" destination="T1B-U2-VXN" id="3OC-hy-vuh"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zkU-KT-cqE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -928,7 +934,7 @@
         <image name="arrow.turn.down.left" catalog="system" width="64" height="48"/>
         <image name="barOKLogo" width="400" height="400"/>
         <image name="list.dash" catalog="system" width="64" height="42"/>
-        <image name="phone" width="80" height="80"/>
+        <image name="phone" width="50" height="50"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="BKK-Rg-T6f"/>
