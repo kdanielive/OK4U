@@ -639,7 +639,7 @@
                                     <segue destination="ciS-we-CcC" kind="show" id="Nz8-wy-lfi"/>
                                 </connections>
                             </button>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="phone" translatesAutoresizingMaskIntoConstraints="NO" id="T1B-U2-VXN">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="phoneIcon" translatesAutoresizingMaskIntoConstraints="NO" id="T1B-U2-VXN">
                                 <rect key="frame" x="147" y="415" width="120" height="120"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="120" id="5Q7-5E-ghB"/>
@@ -704,18 +704,22 @@
                                     <segue destination="oiJ-On-xPb" kind="unwind" unwindAction="unwindToPublicSafetyWithSegue:" id="kkl-f3-n8a"/>
                                 </connections>
                             </button>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="phone" translatesAutoresizingMaskIntoConstraints="NO" id="72N-VX-q6I">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="phoneIcon" translatesAutoresizingMaskIntoConstraints="NO" id="72N-VX-q6I">
                                 <rect key="frame" x="132" y="400" width="150" height="150"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="150" id="16e-KX-hno"/>
+                                    <constraint firstAttribute="height" constant="150" id="Z3M-Re-mgF"/>
+                                </constraints>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
                         <constraints>
                             <constraint firstItem="6ih-61-g6W" firstAttribute="bottom" secondItem="7gm-zP-DNR" secondAttribute="bottom" constant="20" id="6mc-e8-ng3"/>
-                            <constraint firstItem="72N-VX-q6I" firstAttribute="centerY" secondItem="6ih-61-g6W" secondAttribute="centerY" id="D1l-tM-6iK"/>
                             <constraint firstItem="7gm-zP-DNR" firstAttribute="leading" secondItem="6ih-61-g6W" secondAttribute="leading" id="XPq-iM-c5m"/>
                             <constraint firstItem="7gm-zP-DNR" firstAttribute="trailing" secondItem="6ih-61-g6W" secondAttribute="trailing" id="Yhv-X0-diR"/>
-                            <constraint firstItem="72N-VX-q6I" firstAttribute="centerX" secondItem="6ih-61-g6W" secondAttribute="centerX" id="Ziv-y0-R2v"/>
+                            <constraint firstItem="72N-VX-q6I" firstAttribute="centerY" secondItem="6ih-61-g6W" secondAttribute="centerY" id="i3J-IM-4Cc"/>
+                            <constraint firstItem="72N-VX-q6I" firstAttribute="centerX" secondItem="6ih-61-g6W" secondAttribute="centerX" id="kGA-8W-bor"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6ih-61-g6W"/>
                     </view>
@@ -996,7 +1000,7 @@
         <image name="arrow.turn.down.left" catalog="system" width="64" height="48"/>
         <image name="barOKLogo" width="400" height="400"/>
         <image name="list.dash" catalog="system" width="64" height="42"/>
-        <image name="phone" width="50" height="50"/>
+        <image name="phoneIcon" width="50" height="50"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="BKK-Rg-T6f"/>
