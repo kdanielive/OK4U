@@ -12,6 +12,7 @@ import Contacts
 class PublicSafetyViewController: UIViewController {
 
     @IBOutlet var callImage: UIImageView!
+    @IBOutlet var addContactButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -20,16 +21,93 @@ class PublicSafetyViewController: UIViewController {
         callImage.isUserInteractionEnabled = true
         callImage.addGestureRecognizer(tapGestureRecognizer)
 
+        addContactButton.layer.borderWidth = 1
         // Do any additional setup after loading the view.
     }
     
     @objc func imageTapped(tapGestureRecognizer: UITapGestureRecognizer)
     {
         dialNumber(number: "01039510870")
+        //dialNumber(number: "+12128545555")
+        
+        let tappedImage = tapGestureRecognizer.view as! UIImageView
+        tappedImage.alpha = 0.5
+        Timer.scheduledTimer(timeInterval: 0.3, target: self, selector: #selector(buttonAlpha), userInfo: nil, repeats: false)
+    }
+    
+    @objc func buttonAlpha() {
+        callImage.alpha = 1
     }
     
     @IBAction func pressedAddContact(_ sender: UIButton) {
+        var emergencyExists = false
         
+        let contacts = self.getContactFromCNContact()
+        for contact in contacts {
+            if(contact.givenName=="Emergency") {
+                emergencyExists = true
+            }
+        }
+        
+        if(!emergencyExists) {
+            let store = CNContactStore()
+            let contact = CNMutableContact()
+            contact.familyName = ""
+            contact.givenName = "Emergency"
+            contact.phoneNumbers = [CNLabeledValue(label: CNLabelHome, value: CNPhoneNumber(stringValue: "0100000000"))]
+            /*// Address
+            let address = CNMutablePostalAddress()
+            address.street = "Your Street"
+            address.city = "Your City"
+            address.state = "Your State"
+            address.postalCode = "Your ZIP/Postal Code"
+            address.country = "Your Country"
+            let home = CNLabeledValue<CNPostalAddress>(label:CNLabelHome, value:address)
+            contact.postalAddresses = [home]
+            */
+            // Save
+            let saveRequest = CNSaveRequest()
+            saveRequest.add(contact, toContainerWithIdentifier: nil)
+            try? store.execute(saveRequest)
+        }
+    }
+    
+    func getContactFromCNContact() -> [CNContact] {
+
+        let contactStore = CNContactStore()
+        let keysToFetch = [
+            CNContactFormatter.descriptorForRequiredKeys(for: .fullName),
+            CNContactGivenNameKey,
+            CNContactMiddleNameKey,
+            CNContactFamilyNameKey,
+            CNContactEmailAddressesKey,
+            ] as [Any]
+
+        //Get all the containers
+        var allContainers: [CNContainer] = []
+        do {
+            allContainers = try contactStore.containers(matching: nil)
+        } catch {
+            print("Error fetching containers")
+        }
+
+        var results: [CNContact] = []
+
+        // Iterate all containers and append their contacts to our results array
+        for container in allContainers {
+
+            let fetchPredicate = CNContact.predicateForContactsInContainer(withIdentifier: container.identifier)
+
+            do {
+                let containerResults = try contactStore.unifiedContacts(matching: fetchPredicate, keysToFetch: keysToFetch as! [CNKeyDescriptor])
+                results.append(contentsOf: containerResults)
+
+            } catch {
+                print("Error fetching results for container")
+            }
+        }
+
+        return results
     }
     
     func dialNumber(number : String) {

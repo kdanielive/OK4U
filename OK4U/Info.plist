@@ -36,9 +36,7 @@
 	<key>NSLocationWhenInUseUsageDescription</key>
 	<string>Shows your location on the map and helps improve the map.</string>
 	<key>NSUserActivityTypes</key>
-	<array>
-		<string>HelpIntent</string>
-	</array>
+	<array/>
 	<key>UIBackgroundModes</key>
 	<array>
 		<string>audio</string>
@@ -66,5 +64,7 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
+	<key>NSContactsUsageDescription</key>
+	<string>Adds Public Safety Emergency Number</string>
 </dict>
 </plist>
